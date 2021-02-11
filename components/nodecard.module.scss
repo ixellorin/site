@@ -1,0 +1,178 @@
+.cardContainer {
+    height: 300px;
+    width: 300px;
+}
+
+.card {
+    text-align: center !important;
+    border: 5px solid var(--white);
+    height: 100%;
+    overflow-y: hidden;
+    width: 100%;
+    transition: .4s;
+    box-sizing: border-box;
+    background: var(--white);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    position: relative;
+    outline: none !important;
+    
+    svg {
+        transform: scale(.75);
+        stroke: var(--md-grey);
+        stroke-width: 5px;
+        fill: none;
+        transition: .4s ease-out;
+    }
+    
+    .label {
+        margin-top: 30px;
+        font-size: 30px;
+        color: var(--md-grey);
+        width: 100%;
+        transition: .4s ease-out;
+    }
+}
+
+.card::before, .card::after {
+    content:"";
+    width: 0px;
+    height: 5px;
+    position: absolute;
+    transition: all .4s ease-out;
+    background: var(--md-blue);
+}
+
+.card::before {
+    top: 0px;
+    right: 0px;
+}
+
+.card::after {
+    bottom: 0px;
+    left: 0px;
+}
+
+        
+.container::before, .container::after {
+    content:"";
+    width: 5px;
+    height: 0px;
+    z-index: 299;
+    position: absolute;
+    transition: all .4s ease-out;
+    background: var(--md-blue);
+}
+
+.container::before {
+    bottom: 0px;
+    right: 0px;
+}
+
+.container::after {
+    top: 0px;
+    left: 0px;
+}
+
+.card:hover {
+    cursor: pointer;
+
+    svg {
+        height: 155px;
+        stroke: var(--md-blue) !important;
+    }
+    
+    .label {
+        color: var(--md-blue);
+        
+        ::before, ::after {
+            height: 100% !important;
+        }
+    }
+}
+
+.card:hover::before, .card:hover::after {
+    width: 100%;
+}
+
+.container:hover::before, .container:hover::after {
+    height: 100%;
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 767px) {
+    .cardContainer {
+        height: 250px;
+        width: 250px;
+    }
+    .card {
+        padding-top: 10px;
+        text-align: center;
+        overflow: hidden;
+        
+        svg {
+            transform: scale(.65);
+        }
+        
+        .label {
+            margin-top: 0px;
+            font-size: 30px;
+        }
+    }    
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .cardContainer {
+        height: 250px;
+        width: 185px;
+    }
+    .card {
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        overflow: hidden;
+        
+        svg {
+            transform: scale(.35);
+        }
+        
+        
+        .label {
+            margin-top: 0px;
+            font-size: 20px;
+            color: var(--md-grey);
+            width: 100%;
+            transition: .4s ease-out;
+        }
+    }    
+}
+
+@media screen and (max-width: 1200px) and (min-width: 993px) {
+    .cardContainer {
+        height: 250px;
+        width: 225px;
+    }
+    
+    .card {
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        overflow: hidden;
+        
+        svg {
+            transform: scale(.50);
+        }
+        
+        
+        .label {
+            margin-top: 0px;
+            font-size: 25px;
+            color: var(--md-grey);
+            width: 100%;
+            transition: .4s ease-out;
+        }
+    }    
+}

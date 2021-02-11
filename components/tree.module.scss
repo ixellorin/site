@@ -1,0 +1,118 @@
+.node {
+    fill: #FFFFFF;
+    stroke: var(--md-grey);
+    stroke-width: 3px;
+}
+
+.stem {
+    stroke: var(--md-grey);
+    stroke-width: 3px;
+}
+
+.treeContainer {
+    text-align: center;
+    height: 100vh;
+}
+
+.start {
+    font-size: 75px;
+    color: var(--md-grey);
+    padding-bottom: 25px;
+}
+
+.description {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 50px;
+    font-size: 25px;
+    height: 50px !important;
+    min-height: 50px !important;
+}
+
+.prompt {
+    position: absolute;
+    height: 2rem;
+    animation: shift 2s infinite;
+}
+
+@keyframes shift {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 550px) {
+    .treeContainer {
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 767px) {
+    .tree {
+        display: none;
+    }
+    .start {
+        font-size: 50px;
+        padding-bottom: 25px;
+    }   
+
+    .description {
+        padding-top: 10x;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .start {
+        font-size: 50px;
+        padding-bottom: 25px;
+    }
+    .computer {
+        overflow: visible;
+        path {
+            transform: translateX(-100px);
+        }
+    }
+    
+    .description {
+        padding-top: 25px;
+        font-size: 18px;
+        max-width: 750px;
+    }
+}
+
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .start {
+        font-size: 50px;
+        color: var(--md-grey);
+        padding-bottom: 25px;
+    }
+
+    .description {
+        padding-top: 25px;
+        font-size: 20px;
+    }
+
+    .prompt {
+        margin-top: 50px;
+    }
+
+    .computer {
+        overflow: visible;
+        path {
+            transform: translateX(-25px);
+        }
+    }
+}
