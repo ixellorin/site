@@ -1,11 +1,14 @@
 import * as React from "react";
 
-export default function AccountIcon(props) {
+function SvgComponent(props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={155} height={155} {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" width={78} height={78} {...props}>
       <path
-        d="M77.5 2.5a75 75 0 1075 75 75.027 75.027 0 00-75-75zm0 22.5A22.5 22.5 0 1155 47.5 22.47 22.47 0 0177.5 25zm0 106.5a54 54 0 01-45-24.15c.225-14.925 30-23.1 45-23.1 14.925 0 44.775 8.175 45 23.1a54 54 0 01-45 24.15z"
+        d="M39 1.5A37.5 37.5 0 1076.5 39 37.514 37.514 0 0039 1.5zm0 11.25A11.25 11.25 0 1127.75 24 11.235 11.235 0 0139 12.75zM39 66a27 27 0 01-22.5-12.075c.113-7.463 15-11.55 22.5-11.55 7.462 0 22.387 4.087 22.5 11.55A27 27 0 0139 66z"
       />
     </svg>
   );
 }
+
+export default SvgComponent;
+

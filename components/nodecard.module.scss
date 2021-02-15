@@ -41,7 +41,7 @@
     height: 5px;
     position: absolute;
     transition: all .4s ease-out;
-    background: var(--md-blue);
+    background: var(--grn);
 }
 
 .card::before {
@@ -62,7 +62,7 @@
     z-index: 299;
     position: absolute;
     transition: all .4s ease-out;
-    background: var(--md-blue);
+    background: var(--grn);
 }
 
 .container::before {
@@ -79,12 +79,11 @@
     cursor: pointer;
 
     svg {
-        height: 155px;
-        stroke: var(--md-blue) !important;
+        stroke: var(--grn) !important;
     }
     
     .label {
-        color: var(--md-blue);
+        color: var(--grn);
         
         ::before, ::after {
             height: 100% !important;

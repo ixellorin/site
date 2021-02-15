@@ -1,16 +1,19 @@
 import * as React from "react";
 
-export default function LayersIcon(props) {
+function SvgComponent(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={158.455}
-      height={156.203}
+      width={80.073}
+      height={78.722}
       {...props}
     >
       <path
-        d="M79.142 133.201L17.725 88.13l-13.5 9.911 75 55.06 75-55.06-13.583-9.99-61.5 45.15zm.083-19.979l61.333-45.071 13.667-9.99-75-55.06-75 55.06 13.583 9.99z"
+        d="M39.993 66.911L9.285 44.375l-6.75 4.956 37.5 27.53 37.5-27.53-6.792-4.995-30.75 22.575zm.042-9.99l30.667-22.535 6.833-4.995-37.5-27.53-37.5 27.53 6.792 4.995z"
       />
     </svg>
   );
 }
+
+export default SvgComponent;
+

@@ -1,11 +1,19 @@
 import * as React from "react";
 
-export default function ComputerIcon(props) {
+function SvgComponent(props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={230} height={155} {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={115.5}
+      height={78}
+      {...props}
+    >
       <path
-        d="M190 133.75A18.725 18.725 0 00208.656 115l.094-93.75A18.805 18.805 0 00190 2.5H40a18.805 18.805 0 00-18.75 18.75V115A18.805 18.805 0 0040 133.75H2.5v18.75h225v-18.75zM40 21.25h150V115H40z"
+        d="M95.25 67.125a9.362 9.362 0 009.328-9.375l.047-46.875A9.4 9.4 0 0095.25 1.5h-75a9.4 9.4 0 00-9.375 9.375V57.75a9.4 9.4 0 009.375 9.375H1.5V76.5H114v-9.375zm-75-56.25h75V57.75h-75z"
       />
     </svg>
   );
 }
+
+export default SvgComponent;
+

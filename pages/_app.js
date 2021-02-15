@@ -4,7 +4,7 @@ export default function App({ Component, pageProps }) {
     return (
         <div>
             <Head>
-            <meta charset="utf-8" property="og:url" content="http://www.printr.ca/" />
+            <meta charSet="utf-8" property="og:url" content="http://www.printr.ca/" />
             <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="theme-color" content="#000000" />
@@ -21,8 +21,8 @@ export default function App({ Component, pageProps }) {
             <script src="jquery-3.5..min.js"></script>
 
             {/* <!-- Import bootstrap --> */}
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossOrigin="anonymous" />
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossOrigin="anonymous"></script>
 
             {/* <!-- Import Material Design Icons --> */}
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons"

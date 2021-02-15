@@ -9,7 +9,7 @@ export default function Landing(props) {
     return (
         <div className={styles.landing}>
             <Grid container alignContent="center" alignItems="center" justify="center" className={styles.landing}>
-                <Grid item direction="column" justify="center">
+                <Grid item justify="center">
                     <div className={styles.profile}>
                         <Image src="/images/profile.jpg"
                         layout='fill'

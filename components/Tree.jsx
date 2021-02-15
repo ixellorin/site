@@ -1,13 +1,7 @@
 import NodeCard from './NodeCard';
 
-import Icon from '@mdi/react';
 import { Grid } from '@material-ui/core';
 import { useState, useEffect } from 'react';
-import AccountIcon from './icons/AccountIcon';
-import CameraIcon from './icons/CameraIcon';
-import ComputerIcon from './icons/ComputerIcon';
-import LayersIcon from './icons/LayersIcon';
-import { mdiChevronDoubleDown } from '@mdi/js';
 
 import styles from './tree.module.scss';
 
@@ -24,36 +18,30 @@ export default function Tree(props) {
     let treeWidth = useTreeSize()
     let offset = useOffset()
     console.log(treeWidth)
-    const nodes = [
-        { label: 'About', icon: <AccountIcon />, description: "Read about my story, my goals and my passions." },
-        { label: 'Experience', icon: <ComputerIcon className={styles.computer} />, description: "A summary of skills, previous work experience and other industry-related events such as hackathons; an online resume of sorts." },
-        { label: 'Projects', icon: <LayersIcon />, description: "Library of small projects with links to source code and/or live examples, including those from hackathons." },
-        { label: 'Photography', icon: <CameraIcon />, description: "Gallery of some of my photographs; practice makes progress." },
-    ];
     const head = { label: 'Head'};
 
     return (
         <div className={styles.treeContainer}>
             <Grid container alignContent="center" alignItems="center" justify="center" className={styles.treeContainer}>
-                <Grid item direction='column' alignItems="center" >
-                <div className={styles.start}><span>Let's get started!</span></div>
-                <svg id="nodes" width={treeWidth} className={styles.tree}>
-                    <line x1="50%" y1="13" x2="50%" y2="95" className={styles.stem}/>
-                    <line x1="40" y1="95" x2="100%" y2="95" transform="translate(-20,0)" className={styles.stem}/>
-                    {nodes.map((node, n) => {
-                        if (n == 0) {
-                            return <circle key={n} cx="13" cy="95" r="10" className={styles.node} />
-                        } else if (n < nodes.length - 1) {
-                            return <circle key={n} cx={(treeWidth/(nodes.length - 1)) * n} cy="95" r="10" className={styles.node} />
-                        } else {
-                            return <circle key={n} cx="100%" transform="translate(-13,0)" cy="95" r="10" className={styles.node} />
-                        }
-                    })}
-                    <circle cx="50%" cy="13" r="10" className={styles.node}/>
-                </svg>
+                <Grid item>
+                    <div className={styles.start}><span>Let's get started!</span></div>
+                    <svg id="nodes" width={treeWidth} className={styles.tree}>
+                        <line x1="50%" y1="13" x2="50%" y2="95" className={styles.stem}/>
+                        <line x1="40" y1="95" x2="100%" y2="95" transform="translate(-20,0)" className={styles.stem}/>
+                        {props.nodes.map((node, n) => {
+                            if (n == 0) {
+                                return <circle key={n} cx="13" cy="95" r="10" className={styles.node} />
+                            } else if (n < props.nodes.length - 1) {
+                                return <circle key={n} cx={(treeWidth/(props.nodes.length - 1)) * n} cy="95" r="10" className={styles.node} />
+                            } else {
+                                return <circle key={n} cx="100%" transform="translate(-13,0)" cy="95" r="10" className={styles.node} />
+                            }
+                        })}
+                        <circle cx="50%" cy="13" r="10" className={styles.node}/>
+                    </svg>
                 </Grid>
                 <Grid container justify="space-around" alignItems="center" style={{ width: treeWidth + offset }}>
-                    {nodes.map((node, n) => {
+                    {props.nodes.map((node, n) => {
                         return(<NodeCard key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description}/>)
                     })}
                 </Grid>

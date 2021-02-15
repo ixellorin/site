@@ -1,8 +1,21 @@
 import Head from 'next/head'
+import About from '../components/About'
 import Landing from '../components/Landing';
 import Nodes from '../components/Tree'
+import Hidden from '@material-ui/core/Hidden';
+import Scroller from '../components/Scroller';
+import AccountCardIcon from '../components/icons/AccountCardIcon';
+import CameraCardIcon from '../components/icons/CameraCardIcon';
+import ComputerCardIcon from '../components/icons/ComputerCardIcon';
+import LayersCardIcon from '../components/icons/LayersCardIcon';
 
 export default function Home() {
+  const nodes = [
+    { label: 'About', icon: <AccountCardIcon />, description: "Read a little more about myself, my goals and my passions." },
+    { label: 'Experience', icon: <ComputerCardIcon />, description: "A summary of skills, previous work experience and other industry-related events such as hackathons; an online resume of sorts." },
+    { label: 'Projects', icon: <LayersCardIcon />, description: "Library of small projects with links to source code and/or live examples, including those from hackathons." },
+    { label: 'Photography', icon: <CameraCardIcon />, description: "Gallery of some of my photographs; practice makes progress." },
+  ];
   return (
     <div>
       <Head>
@@ -13,7 +26,10 @@ export default function Home() {
 
       <main>
         <Landing />
-        <Nodes />
+        <Nodes nodes={nodes} />
+        <Scroller nodes={nodes}/>
+        <About />
+        <Landing />
       </main>
 
       <style jsx>{`

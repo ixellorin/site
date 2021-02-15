@@ -1,0 +1,48 @@
+.card {    
+    outline: none !important;
+    border: none;
+    background: none;
+    color: var(--md-grey);
+    transition: all .2s ease-out;
+
+    svg {
+        stroke: var(--md-grey) !important;
+        stroke-width: 3px;
+        fill: none;
+        transition: all .2s ease-out;
+    }
+
+    .label {
+        margin-top: 20px;
+        font-size: 30px;
+        transition: all .2s ease-out;
+    }
+
+    &.active {
+        color: var(--md-blue);
+    }
+}
+
+.card:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.card:nth-child(2) {
+    margin-top: 35px;
+}
+
+.card:last-child {
+    margin-bottom: 35px;
+}
+
+.card:hover {
+    cursor: pointer;
+
+    svg {
+        stroke: var(--grn) !important;
+    }
+    
+    .label {
+        color: var(--grn);
+    }
+}
