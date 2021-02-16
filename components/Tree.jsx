@@ -23,8 +23,8 @@ export default function Tree(props) {
     return (
         <div className={styles.treeContainer}>
             <Grid container alignContent="center" alignItems="center" justify="center" className={styles.treeContainer}>
-                <Grid item>
-                    <div className={styles.start}><span>Let's get started!</span></div>
+                <Grid item xs={12}>
+                    <div className={styles.start}><span>Let's get started!</span></div><br/>
                     <svg id="nodes" width={treeWidth} className={styles.tree}>
                         <line x1="50%" y1="13" x2="50%" y2="95" className={styles.stem}/>
                         <line x1="40" y1="95" x2="100%" y2="95" transform="translate(-20,0)" className={styles.stem}/>
@@ -40,6 +40,7 @@ export default function Tree(props) {
                         <circle cx="50%" cy="13" r="10" className={styles.node}/>
                     </svg>
                 </Grid>
+                <br/>
                 <Grid container justify="space-around" alignItems="center" style={{ width: treeWidth + offset }}>
                     {props.nodes.map((node, n) => {
                         return(<NodeCard key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description}/>)

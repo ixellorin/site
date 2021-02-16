@@ -1,7 +1,8 @@
-import Head from 'next/head'
-import About from '../components/About'
 import Landing from '../components/Landing';
-import Nodes from '../components/Tree'
+import Nodes from '../components/Tree';
+import About from '../components/About';
+import Experience from '../components/Experience'
+import Head from 'next/head'
 import Hidden from '@material-ui/core/Hidden';
 import Scroller from '../components/Scroller';
 import AccountCardIcon from '../components/icons/AccountCardIcon';
@@ -29,7 +30,7 @@ export default function Home() {
         <Nodes nodes={nodes} />
         <Scroller nodes={nodes}/>
         <About />
-        <Landing />
+        <Experience />
       </main>
 
       <style jsx>{`
