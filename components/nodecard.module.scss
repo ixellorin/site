@@ -20,7 +20,7 @@
     
     svg {
         transform: scale(.75);
-        stroke: var(--md-grey);
+        stroke: var(--grey-md);
         stroke-width: 5px;
         fill: none;
         transition: .4s ease-out;
@@ -29,7 +29,7 @@
     .label {
         margin-top: 30px;
         font-size: 30px;
-        color: var(--md-grey);
+        color: var(--grey-md);
         width: 100%;
         transition: .4s ease-out;
     }
@@ -41,7 +41,7 @@
     height: 5px;
     position: absolute;
     transition: all .4s ease-out;
-    background: var(--grn);
+    background: var(--grn-md);
 }
 
 .card::before {
@@ -62,7 +62,7 @@
     z-index: 299;
     position: absolute;
     transition: all .4s ease-out;
-    background: var(--grn);
+    background: var(--grn-md);
 }
 
 .container::before {
@@ -79,11 +79,11 @@
     cursor: pointer;
 
     svg {
-        stroke: var(--grn) !important;
+        stroke: var(--grn-md) !important;
     }
     
     .label {
-        color: var(--grn);
+        color: var(--grn-md);
         
         ::before, ::after {
             height: 100% !important;
@@ -142,7 +142,7 @@
         .label {
             margin-top: 0px;
             font-size: 20px;
-            color: var(--md-grey);
+            color: var(--grey-md);
             width: 100%;
             transition: .4s ease-out;
         }
@@ -169,7 +169,7 @@
         .label {
             margin-top: 0px;
             font-size: 25px;
-            color: var(--md-grey);
+            color: var(--grey-md);
             width: 100%;
             transition: .4s ease-out;
         }
