@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { Grid } from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
