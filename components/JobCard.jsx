@@ -5,7 +5,7 @@ import styles from './jobcard.module.scss';
 export default function JobCard(props) {
 
     return (
-        <Grid item sm={12} md={6}>
+        <Grid item sm={12} md={4}>
             <div className={styles.container}>
                 <div className={styles.profile}>
                     <Image src={props.job.img}
