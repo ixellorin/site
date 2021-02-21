@@ -46,50 +46,50 @@ export default function Skills(props) {
         <div className={styles.skillset}>
             <h1>Skillset</h1>
             <Grid container className={styles.offsetter}>
-                <Grid item xs={1}/>
-                <Grid item xs={4}>
+                <Grid item md={1}/>
+                <Grid item md={4}>
                     <div className={styles.skillsHeader}>Languages</div>
                 </Grid>
             </Grid>
             <Grid container>
-                <Grid item xs={1}/>
-                <Grid item xs={4} className={styles.skillsetContainer}>
+                <Grid item md={1}/>
+                <Grid item md={4} className={styles.skillsetContainer}>
                     {feSkillset.map((skill, n) => {
                         return(<SkillRating key={n} label={skill.label} rating={skill.rating} max={max}/>)
                     })}
                 </Grid>
-                <Grid item xs={1}/>
-                <Grid item xs={1}/>
-                <Grid item xs={4}>
+                <Grid item md={1}/>
+                <Grid item md={1}/>
+                <Grid item md={4}>
                     {beSkillset.map((skill, n) => {
                         return(<SkillRating key={n} label={skill.label} rating={skill.rating} max={max}/>)
                     })}
                 </Grid>
-                <Grid item xs={1}/>
+                <Grid item md={1}/>
             </Grid>
             <Grid container className={styles.offsetter}>
-                <Grid item xs={1}/>
-                <Grid item xs={4}>
+                <Grid item md={1}/>
+                <Grid item md={4}>
                     <div className={styles.skillsHeader}>Tools and Other Skills</div>
                 </Grid>
             </Grid>
             <Grid container>
-                <Grid item xs={1}/>
-                <Grid item xs={4} className={styles.skillsetContainer}>
+                <Grid item md={1}/>
+                <Grid item md={4} className={styles.skillsetContainer}>
                     {toolSetA.map((skill, n) => {
                         return(<SkillRating key={n} label={skill.label} rating={skill.rating} max={max}/>)
                     })}
                 </Grid>
-                <Grid item xs={1}/>
-                <Grid item xs={1}/>
-                <Grid item xs={4}>
+                <Grid item md={1}/>
+                <Grid item md={1}/>
+                <Grid item md={4}>
                     {toolSetB.map((skill, n) => {
                         return(<SkillRating key={n} label={skill.label} rating={skill.rating} max={max}/>)
                     })}
                 </Grid>
-                <Grid item xs={1}/>
+                <Grid item md={1}/>
             </Grid>
-            <Grid container justify="flex-start">
+            <Grid container justify="flex-start" className={styles.legend}>
                 <Grid item xs={1}/>
                 <Grid item xs={2.2}>
                     <SkillRating label={"Learning:"} rating={1} max={max} legend={true}/>

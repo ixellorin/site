@@ -22,7 +22,13 @@
     padding-left: 25px;
 }
 
-@media only screen and (max-width: 768px) and (min-width: 551px) {
+@media screen and (max-width: 550px) {
+    .legend {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 551px) {
     .skillset {
         padding-right: 117px;
     }
