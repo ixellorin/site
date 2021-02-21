@@ -12,11 +12,15 @@ export default function Jobs(props) {
         <div className={styles.jobs}>
             <h1>Work Experience</h1>
             <Grid container justify="center">
-                <Grid item container className={styles.listings} xs={12} lg={10} justify="space-between">
                     {props.jobs.map((job, n) => {
-                        return (<JobCard job={job} key={n}/>)
+                        return (
+                            <>
+                                <Grid item xs={1} />
+                                <JobCard job={job} key={n}/>
+                                <Grid item xs={1} />
+                            </>
+                        )
                     })}
-                </Grid>
             </Grid>
         </div>
     )

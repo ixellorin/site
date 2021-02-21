@@ -2,6 +2,7 @@
 import { Grid } from '@material-ui/core';
 import Jobs from './Jobs';
 import Skills from './Skills';
+import Hackathons from './Hackathons';
 import { useState, useEffect } from 'react';
 import styles from './experience.module.scss';
 
@@ -45,12 +46,44 @@ export default function Experience(props) {
         },
     ]
 
+    const hackathons = [
+        {
+            name: 'BizHacks 2020',
+            role: 'Technical Mentor',
+            img: '/images/hackathons/bizhacks.png',
+            imgWidth: 150,
+            imgHeight: 150,
+        },
+        {
+            name: 'Global Game Jam 2016',
+            role: 'Development, 3D Asset Development',
+            img: '/images/hackathons/ggj.png',
+            imgWidth: 280,
+            imgHeight: 150,
+        },
+        {
+            name: 'Global Game Jam 2015',
+            role: 'Level/Gameplay Design, Development',
+            img: '/images/hackathons/ggj.png',
+            imgWidth: 280,
+            imgHeight: 150,
+        },
+        {
+            name: 'Think Global Hack Local 2013',
+            role: 'Development',
+            img: '/images/hackathons/tghl.jpg',
+            imgWidth: 137,
+            imgHeight: 150,
+        },
+    ]
+
     const skills = []
 
     return (
         <div className={styles.experience}>
             <Jobs jobs={jobs} />
             <Skills skills={skills} />
+            <Hackathons hackathons={hackathons} />
         </div>
     )
 }
