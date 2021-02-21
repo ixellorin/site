@@ -1,6 +1,7 @@
 
 import { Grid } from '@material-ui/core';
 import Jobs from './Jobs';
+import Skills from './Skills';
 import { useState, useEffect } from 'react';
 import styles from './experience.module.scss';
 
@@ -42,12 +43,14 @@ export default function Experience(props) {
             imgWidth: 100,
             imgHeight: 100,
         },
-         
     ]
+
+    const skills = []
 
     return (
         <div className={styles.experience}>
             <Jobs jobs={jobs} />
+            <Skills skills={skills} />
         </div>
     )
 }
