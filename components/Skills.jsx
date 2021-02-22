@@ -54,14 +54,14 @@ export default function Skills(props) {
             <Grid container>
                 <Grid item md={1}/>
                 <Grid item md={4} className={styles.skillsetContainer}>
-                    {feSkillset.map((skill, n) => {
+                    {(feSkillset || []).map((skill, n) => {
                         return(<SkillRating key={n} label={skill.label} rating={skill.rating} max={max}/>)
                     })}
                 </Grid>
                 <Grid item md={1}/>
                 <Grid item md={1}/>
                 <Grid item md={4}>
-                    {beSkillset.map((skill, n) => {
+                    {(beSkillset || []).map((skill, n) => {
                         return(<SkillRating key={n} label={skill.label} rating={skill.rating} max={max}/>)
                     })}
                 </Grid>
@@ -76,14 +76,14 @@ export default function Skills(props) {
             <Grid container>
                 <Grid item md={1}/>
                 <Grid item md={4} className={styles.skillsetContainer}>
-                    {toolSetA.map((skill, n) => {
+                    {(toolSetA || []).map((skill, n) => {
                         return(<SkillRating key={n} label={skill.label} rating={skill.rating} max={max}/>)
                     })}
                 </Grid>
                 <Grid item md={1}/>
                 <Grid item md={1}/>
                 <Grid item md={4}>
-                    {toolSetB.map((skill, n) => {
+                    {(toolSetB || []).map((skill, n) => {
                         return(<SkillRating key={n} label={skill.label} rating={skill.rating} max={max}/>)
                     })}
                 </Grid>

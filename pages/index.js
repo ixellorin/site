@@ -1,7 +1,8 @@
 import Landing from '../components/Landing';
 import Nodes from '../components/Tree';
 import About from '../components/About';
-import Experience from '../components/Experience'
+import Experience from '../components/Experience';
+import Projects from '../components/Projects';
 import Head from 'next/head'
 import Hidden from '@material-ui/core/Hidden';
 import Scroller from '../components/Scroller';
@@ -9,6 +10,13 @@ import AccountCardIcon from '../components/icons/AccountCardIcon';
 import CameraCardIcon from '../components/icons/CameraCardIcon';
 import ComputerCardIcon from '../components/icons/ComputerCardIcon';
 import LayersCardIcon from '../components/icons/LayersCardIcon';
+import ComicIcon from '../components/icons/ComicIcon';
+import ControllerIcon from '../components/icons/ControllerIcon';
+import EmailIcon from '../components/icons/EmailIcon';
+import MapIcon from '../components/icons/MapIcon';
+import PokedexIcon from '../components/icons/PokedexIcon';
+import PokemonIcon from '../components/icons/PokemonIcon';
+import WebsiteIcon from '../components/icons/WebsiteIcon';
 
 export default function Home() {
   const nodes = [
@@ -17,6 +25,58 @@ export default function Home() {
     { label: 'Projects', icon: <LayersCardIcon />, description: "Library of small projects with links to source code and/or live examples, including those from hackathons." },
     { label: 'Photography', icon: <CameraCardIcon />, description: "Gallery of some of my photographs; practice makes progress." },
   ];
+
+  const projects = [
+    {
+      title: 'Website',
+      languages: 'Next.js, HTML, CSS',
+      description: 'Designed and prototyped in Adobe XD, developed from the ground-up in Next.JS, and deployed to GitHub Pages to serve as a personal website. Getting in some practice with React/Next.JS.',
+      icon: <WebsiteIcon />
+    },
+    {
+      title: 'My Pokémon App',
+      languages: 'React, HTML, CSS',
+      description: 'Simple app made for use as a visual companion with live-streaming. Getting in some practice with React. Add Pokémon to your  collection and your party to help viewers keep track of your game status.',
+      icon: <PokemonIcon />
+    },
+    {
+      title: 'TF-IDF on Enron Emails',
+      languages: 'Python',
+      description: 'Python playground; running term frequency-inverse document frequency on the released Enron emails dataset.',
+      icon: <EmailIcon />
+    },
+    {
+      title: 'Kapow! Comic Collaboration',
+      languages: 'TypeScript, Fabric.js, AngularJS',
+      description: 'Collaborate to create comics and add comments to your art. Leveraging a RESTful API, Fabric.js for drawing and image insertion. School Project.',
+      icon: <ComicIcon />
+    },
+    {
+      title: 'Source, a side-scroller',
+      languages: 'Blender, Unity, C#',
+      description: 'Part of the 2016 Global Game Jam. Led design, and tried my hand at 3D asset modeling while contributing to development.',
+      icon: <ControllerIcon />
+    },
+    {
+      title: 'Freeze Frame!',
+      languages: 'Unity, C#',
+      description: 'Probably the project I\'m most proud of; part of the 2015 Global Game Jam. Led gameplay and level design, coordinated and participated in development. Ask me about this, and I\'ll have a story for you.',
+      icon: <ControllerIcon />
+    },
+    {
+      title: 'Pokémon Database',
+      languages: 'SQL, PHP',
+      description: 'Search through a database of Pokémon to find out information on the original 151. School Project',
+      icon: <PokedexIcon />
+    },
+    {
+      title: 'Resource Centre Locator App',
+      languages: 'Java, XML',
+      description: 'Locate resources cetres of the Family Resource Programs of british Columbia; from my first hackathon!',
+      icon: <MapIcon />
+    },
+  ]
+
   return (
     <div>
       <Head>
@@ -31,6 +91,7 @@ export default function Home() {
         <Scroller nodes={nodes}/>
         <About />
         <Experience />
+        <Projects projects={projects} />
       </main>
 
       <style jsx>{`

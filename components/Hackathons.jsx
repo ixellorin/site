@@ -12,7 +12,7 @@ export default function Hackathons(props) {
         <div className={styles.hackathons}>
             <h1>Hackathons</h1>
             <Grid container justify="center">
-                {props.hackathons.map((hackathon, n) => {
+                {(props.hackathons || []).map((hackathon, n) => {
                     return (
                     <>
                         <Grid item xs={1} />
