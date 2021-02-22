@@ -31,50 +31,67 @@ export default function Home() {
       title: 'Website',
       languages: 'Next.js, HTML, CSS',
       description: 'Designed and prototyped in Adobe XD, developed from the ground-up in Next.JS, and deployed to GitHub Pages to serve as a personal website. Getting in some practice with React/Next.JS.',
-      icon: <WebsiteIcon />
+      icon: <WebsiteIcon />,
     },
     {
       title: 'My Pokémon App',
       languages: 'React, HTML, CSS',
       description: 'Simple app made for use as a visual companion with live-streaming. Getting in some practice with React. Add Pokémon to your  collection and your party to help viewers keep track of your game status.',
-      icon: <PokemonIcon />
+      icon: <PokemonIcon />,
+      gitHubURL: 'https://github.com/ixellorin/Pokemon-React-App',
+      externalURL: 'https://ixellorin.github.io/Pokemon-React-App/',
     },
     {
       title: 'TF-IDF on Enron Emails',
       languages: 'Python',
       description: 'Python playground; running term frequency-inverse document frequency on the released Enron emails dataset.',
-      icon: <EmailIcon />
+      icon: <EmailIcon />,
+      gitHubURL: 'https://github.com/ixellorin/Enron',
     },
     {
       title: 'Kapow! Comic Collaboration',
       languages: 'TypeScript, Fabric.js, AngularJS',
       description: 'Collaborate to create comics and add comments to your art. Leveraging a RESTful API, Fabric.js for drawing and image insertion. School Project.',
-      icon: <ComicIcon />
+      icon: <ComicIcon />,
+      gitHubURL: 'https://github.com/ixellorin/Team3',
     },
     {
       title: 'Source, a side-scroller',
       languages: 'Blender, Unity, C#',
       description: 'Part of the 2016 Global Game Jam. Led design, and tried my hand at 3D asset modeling while contributing to development.',
-      icon: <ControllerIcon />
+      icon: <ControllerIcon />,
+      gitHubURL: 'https://github.com/ixellorin/GGJ2016',
+      externalURL: 'https://globalgamejam.org/2016/games/source',
     },
     {
       title: 'Freeze Frame!',
       languages: 'Unity, C#',
       description: 'Probably the project I\'m most proud of; part of the 2015 Global Game Jam. Led gameplay and level design, coordinated and participated in development. Ask me about this, and I\'ll have a story for you.',
-      icon: <ControllerIcon />
+      icon: <ControllerIcon />,
+      gitHubURL: 'https://github.com/ixellorin/FreezeFrame',
+      externalURL: 'https://globalgamejam.org/2015/games/freeze-frame',
     },
     {
       title: 'Pokémon Database',
       languages: 'SQL, PHP',
       description: 'Search through a database of Pokémon to find out information on the original 151. School Project',
-      icon: <PokedexIcon />
+      icon: <PokedexIcon />,
+      gitHubURL: 'https://github.com/ixellorin/PokemonDB',
+    },
+    {
+      title: 'Runner',
+      languages: 'Java, XML',
+      description: 'Endearingly described as "Crappy First Android Game", this was my first (Android) game, and first side project that I developed with friends.',
+      icon: <ControllerIcon />,
+      gitHubURL: 'https://github.com/ixellorin/Runner/tree/master/Runner',
     },
     {
       title: 'Resource Centre Locator App',
       languages: 'Java, XML',
       description: 'Locate resources cetres of the Family Resource Programs of british Columbia; from my first hackathon!',
-      icon: <MapIcon />
-    },
+      icon: <MapIcon />,
+      gitHubURL: 'https://github.com/ixellorin/FRP-BC',
+    }
   ]
 
   return (
