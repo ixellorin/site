@@ -17,11 +17,11 @@ export default function JobCard(props) {
                     <span className={styles.title}>{props.job.company}</span><br/>
                     <span className={styles.title}>{props.job.title}</span><br/>
                     <span className={styles.title}>{props.job.date}</span><br/><br/>
-                    {props.job.hooks.map((hook, n) => {
+                    {(props.job.hooks || []).map((hook, n) => {
                         return (<span key={n}>{hook}<br/></span>)
                     })}
                     <br/>
-                    <span><u>Read more</u></span>
+                    {/* <span><u>Read more</u></span> */}
                 </div>
             </div>
         </Grid>

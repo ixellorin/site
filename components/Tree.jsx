@@ -17,7 +17,6 @@ export default function Tree(props) {
     }
     let treeWidth = useTreeSize()
     let offset = useOffset()
-    console.log(treeWidth)
     const head = { label: 'Head'};
 
     return (

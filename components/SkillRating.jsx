@@ -5,7 +5,6 @@ export default function SkillRating(props) {
     const items = []
 
     for (let i = 0; i < (props.max || 5); i++) {
-        console.log(props)
         let className = i < (props.rating || 0) ? `${styles.filled} ${styles.rating}` : styles.rating
         if (props.legend) {
             className = className.concat(` ${styles.legend}`)
