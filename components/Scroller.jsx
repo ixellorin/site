@@ -30,7 +30,7 @@ export default function Scroller(props) {
                 size={2.5}
                 title="Chevron Up"
                 className={styles.scrollIcon}/>
-                {nodes.map((node, n) => {
+                {(nodes || []).map((node, n) => {
                     return(<ScrollerSection icon={node.icon} label={node.label} />)
                 })}
                 <Icon path={mdiChevronDown}

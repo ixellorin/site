@@ -1,0 +1,64 @@
+.skillset {
+    padding-right: 391px;
+    text-align: center;
+    background: var(--blue-lt-f);
+    color: var(--blue-dk);
+    padding-left: 117px;
+    padding-bottom: 85px;
+    padding-top: 85px;
+}
+
+.offsetter {
+    margin-top: 50px;
+
+    .skillsHeader {
+        width: 100%;
+        font-size: 25px;
+        text-align: left;
+    }
+}
+
+.legendratecontainer {
+    padding-left: 25px;
+}
+
+@media screen and (max-width: 550px) {
+    .legend {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 551px) {
+    .skillset {
+        padding-right: 117px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+    .skillset {
+        // padding-left: 75px;
+        padding-right: 300px;
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+}
+
+// @media screen and (max-width: 1279px) and (min-width: 1201px) {
+//     .skillset {
+//         padding-top: 100px;
+//         padding-bottom: 10%;
+//         padding-left: 75px;
+//         padding-right: 300px;
+//     }
+// }
+
+
+
+// @media screen and (max-width: 1500px) and (min-width: 1280px) {
+//     .skillset {
+//         padding-left: 75px;
+//         padding-right: 300px;
+//     }
+// }
