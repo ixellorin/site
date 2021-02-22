@@ -21,7 +21,7 @@ export default function JobCard(props) {
                         return (<span key={n}>{hook}<br/></span>)
                     })}
                     <br/>
-                    <span><u>Read more</u></span>
+                    {/* <span><u>Read more</u></span> */}
                 </div>
             </div>
         </Grid>
