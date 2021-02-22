@@ -11,7 +11,7 @@ export default function Projects(props) {
     return (
         <div className={styles.projects}>
             <h1>Projects</h1>
-            <Grid container justify="flex-start">
+            <Grid container justify="flex-start" spacing={10}>
                 {(props.projects || []).map((project, n) => {
                     return (<ProjectCard project={project} key={n}/>)
                 })}

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { Grid } from '@material-ui/core';
-import styles from './hackathoncard.module.scss';
+import styles from './projectcard.module.scss';
 
-export default function HackathonCard (props) {
+export default function ProjectCard (props) {
 
     return (
         <Grid item sm={12} md={4}>
@@ -13,8 +13,7 @@ export default function HackathonCard (props) {
                 <div className={styles.text}>
                     <span className={styles.title}>{props.project.title}</span><br/>
                     <span>{props.project.languages}</span><br/>
-                    {/* <p className={styles.description}>{props.project.description}</p> */}
-                    <span className={styles.description}>{props.project.description}</span>
+                    <div className={styles.description}>{props.project.description}</div>
                 </div>
             </div>
         </Grid>
