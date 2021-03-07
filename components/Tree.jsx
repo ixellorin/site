@@ -20,7 +20,7 @@ export default function Tree(props) {
     const head = { label: 'Head'};
 
     return (
-        <div className={styles.treeContainer}>
+        <div className={styles.treeContainer} id="nodes">
             <Grid container alignContent="center" alignItems="center" justify="center" className={styles.treeContainer}>
                 <Grid item xs={12}>
                     <div className={styles.start}><span>Let's get started!</span></div><br/>

@@ -7,7 +7,7 @@ import { mdiChevronDoubleDown } from '@mdi/js';
 
 export default function Landing(props) {
     return (
-        <div className={styles.landing}>
+        <div className={styles.landing} id="landing">
             <Grid container alignContent="center" alignItems="center" justify="center" className={styles.landing}>
                 <Grid item justify="center">
                     <div className={styles.profile}>

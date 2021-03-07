@@ -1,12 +1,11 @@
 
-import { Grid } from '@material-ui/core';
+import React from 'react';
 import Jobs from './Jobs';
 import Skills from './Skills';
 import Hackathons from './Hackathons';
-import { useState, useEffect } from 'react';
 import styles from './experience.module.scss';
 
-export default function Experience(props) {
+function Experience(props, ref) {
     const jobs = [
         { 
             company: 'KPMG',
@@ -80,10 +79,13 @@ export default function Experience(props) {
     const skills = []
 
     return (
-        <div className={styles.experience}>
+        <div className={styles.experience} id="experience" ref={ref}>
             <Jobs jobs={jobs} />
             <Skills skills={skills} />
             <Hackathons hackathons={hackathons} />
         </div>
     )
 }
+
+
+export default React.forwardRef(Experience)
