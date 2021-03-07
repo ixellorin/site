@@ -4,12 +4,18 @@ import About from '../components/About';
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import Head from 'next/head'
-import Hidden from '@material-ui/core/Hidden';
 import Scroller from '../components/Scroller';
 import AccountCardIcon from '../components/icons/AccountCardIcon';
 import CameraCardIcon from '../components/icons/CameraCardIcon';
 import ComputerCardIcon from '../components/icons/ComputerCardIcon';
 import LayersCardIcon from '../components/icons/LayersCardIcon';
+
+import AccountIcon from '../components/icons/AccountIcon';
+import CameraIcon from '../components/icons/CameraIcon';
+import ComputerIcon from '../components/icons/ComputerIcon';
+import LayersIcon from '../components/icons/LayersIcon';
+
+
 import ComicIcon from '../components/icons/ComicIcon';
 import ControllerIcon from '../components/icons/ControllerIcon';
 import EmailIcon from '../components/icons/EmailIcon';
@@ -17,14 +23,27 @@ import MapIcon from '../components/icons/MapIcon';
 import PokedexIcon from '../components/icons/PokedexIcon';
 import PokemonIcon from '../components/icons/PokemonIcon';
 import WebsiteIcon from '../components/icons/WebsiteIcon';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
-  const nodes = [
-    { label: 'About', icon: <AccountCardIcon />, description: "Read a little more about myself, my goals and my passions." },
-    { label: 'Experience', icon: <ComputerCardIcon />, description: "A summary of skills, previous work experience and other industry-related events such as hackathons; an online resume of sorts." },
-    { label: 'Projects', icon: <LayersCardIcon />, description: "Library of small projects with links to source code and/or live examples, including those from hackathons." },
-    { label: 'Photography', icon: <CameraCardIcon />, description: "Gallery of some of my photographs; practice makes progress." },
-  ];
+  const [doScroll, setDoScroll] = useState(null);
+
+  const aboutRef = useRef(null)
+  const experienceRef = useRef(null)
+  const projectsRef = useRef(null)
+  
+  const [nodes, setNodes] = useState([
+    { label: 'About', icon: <AccountCardIcon />, description: "Read a little more about myself, my goals and my passions.", target: aboutRef },
+    { label: 'Experience', icon: <ComputerCardIcon />, description: "A summary of skills, previous work experience and other industry-related events such as hackathons; an online resume of sorts.", target: experienceRef },
+    { label: 'Projects', icon: <LayersCardIcon />, description: "Library of small projects with links to source code and/or live examples, including those from hackathons.", target: projectsRef },
+    { label: 'Photography', icon: <CameraCardIcon />, description: "Gallery of some of my photographs; practice makes progress.", target: null },
+  ]) 
+
+  const [scrollerSections, setScrollerSections] = useState([
+    { label: 'About', icon: <AccountIcon className="scrollIcon" />, description: "Read a little more about myself, my goals and my passions.", target: aboutRef },
+    { label: 'Experience', icon: <ComputerIcon className="scrollIcon" />, description: "A summary of skills, previous work experience and other industry-related events such as hackathons; an online resume of sorts.", target: experienceRef },
+    { label: 'Projects', icon: <LayersIcon className="scrollIcon" />, description: "Library of small projects with links to source code and/or live examples, including those from hackathons.", target: projectsRef },
+    { label: 'Photography', icon: <CameraIcon className="scrollIcon" />, description: "Gallery of some of my photographs; practice makes progress.", target: null },])
 
   const projects = [
     {
@@ -97,7 +116,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Cio Ellorin</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Two+Tone|Material+Icons+Sharp"/>
       </Head>
@@ -105,10 +124,10 @@ export default function Home() {
       <main>
         <Landing />
         <Nodes nodes={nodes} />
-        <Scroller nodes={nodes}/>
-        <About />
-        <Experience />
-        <Projects projects={projects} />
+        <Scroller sections={scrollerSections} active={null} />
+        <About ref={aboutRef} />
+        <Experience ref={experienceRef} />
+        <Projects projects={projects} ref={projectsRef} />
       </main>
 
       <style jsx>{`
@@ -136,6 +155,18 @@ export default function Home() {
             flex-direction: column;
           }
         }
+
+        .scrollIcon {    
+          color: var(--grey-md);
+          transition: .4s ease-out;
+        }
+
+        .scrollIcon:hover {
+          color: var(--grn-md);
+          cursor: pointer;
+        }
+
+
       `}</style>
 
       {/* <style jsx global>{`

@@ -8,18 +8,6 @@
     overflow: visible;
     transform: scale(.8) translateY(calc(calc(100vh - 708px) / 2)) translateX(50vw);
 }
-
-.scrollIcon {    
-    color: var(--grey-md);
-    transition: .4s ease-out;
-}
-
-.scrollIcon:hover {
-    color: var(--grn-md);
-    cursor: pointer;
-}
-
-
 @media only screen and (max-width: 768px) {
     .scroller {
         display: none;

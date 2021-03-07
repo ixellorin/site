@@ -1,15 +1,15 @@
 
-import Image from 'next/image';
+import React from 'react';
 import { Grid } from '@material-ui/core';
 import ProjectCard from './ProjectCard';
 
 import { useState, useEffect } from 'react';
 import styles from './projects.module.scss';
 
-export default function Projects(props) {
+function Projects(props, ref) {
 
     return (
-        <div className={styles.projects}>
+        <div className={styles.projects} id="projects" ref={ref}>
             <h1>Projects</h1>
             <Grid container justify="flex-start" spacing={10}>
                 {(props.projects || []).map((project, n) => {
@@ -19,3 +19,5 @@ export default function Projects(props) {
         </div>
     )
 }
+
+export default React.forwardRef(Projects)

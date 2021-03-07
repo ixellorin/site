@@ -20,7 +20,7 @@ export default function Tree(props) {
     const head = { label: 'Head'};
 
     return (
-        <div className={styles.treeContainer}>
+        <div className={styles.treeContainer} id="nodes">
             <Grid container alignContent="center" alignItems="center" justify="center" className={styles.treeContainer}>
                 <Grid item xs={12}>
                     <div className={styles.start}><span>Let's get started!</span></div><br/>
@@ -42,7 +42,7 @@ export default function Tree(props) {
                 <br/>
                 <Grid container justify="space-around" alignItems="center" style={{ width: treeWidth + offset }}>
                     {props.nodes.map((node, n) => {
-                        return(<NodeCard key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description}/>)
+                        return(<NodeCard key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description} target={node.target}/>)
                     })}
                 </Grid>
                 <div className={styles.description}>
