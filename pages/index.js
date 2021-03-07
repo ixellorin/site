@@ -33,10 +33,10 @@ export default function Home() {
   const projectsRef = useRef(null)
   
   const [nodes, setNodes] = useState([
-    { label: 'About', icon: <AccountCardIcon />, description: "Read a little more about myself, my goals and my passions." },
-    { label: 'Experience', icon: <ComputerCardIcon />, description: "A summary of skills, previous work experience and other industry-related events such as hackathons; an online resume of sorts." },
-    { label: 'Projects', icon: <LayersCardIcon />, description: "Library of small projects with links to source code and/or live examples, including those from hackathons." },
-    { label: 'Photography', icon: <CameraCardIcon />, description: "Gallery of some of my photographs; practice makes progress." },
+    { label: 'About', icon: <AccountCardIcon />, description: "Read a little more about myself, my goals and my passions.", target: aboutRef },
+    { label: 'Experience', icon: <ComputerCardIcon />, description: "A summary of skills, previous work experience and other industry-related events such as hackathons; an online resume of sorts.", target: experienceRef },
+    { label: 'Projects', icon: <LayersCardIcon />, description: "Library of small projects with links to source code and/or live examples, including those from hackathons.", target: projectsRef },
+    { label: 'Photography', icon: <CameraCardIcon />, description: "Gallery of some of my photographs; practice makes progress.", target: null },
   ]) 
 
   const [scrollerSections, setScrollerSections] = useState([
@@ -112,7 +112,7 @@ export default function Home() {
       gitHubURL: 'https://github.com/ixellorin/FRP-BC',
     }
   ]
-  
+
   return (
     <div>
       <Head>

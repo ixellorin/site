@@ -42,7 +42,7 @@ export default function Tree(props) {
                 <br/>
                 <Grid container justify="space-around" alignItems="center" style={{ width: treeWidth + offset }}>
                     {props.nodes.map((node, n) => {
-                        return(<NodeCard key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description}/>)
+                        return(<NodeCard key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description} target={node.target}/>)
                     })}
                 </Grid>
                 <div className={styles.description}>

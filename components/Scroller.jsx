@@ -19,7 +19,7 @@ export default function Scroller(props) {
                 title="Chevron Up"
                 className={styles.scrollIcon}/>
                 {(props.sections || []).map((section, n) => {
-                    return(<ScrollerItem section={section} />)
+                    return(<ScrollerItem icon={section.icon} label={section.label} target={section.target} />)
                 })}
                 <Icon path={mdiChevronDown}
                 size={2.5}
