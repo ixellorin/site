@@ -8,6 +8,18 @@
     overflow: visible;
     transform: scale(.8) translateY(calc(calc(100vh - 708px) / 2)) translateX(50vw);
 }
+
+.scrollButton {
+    outline: none !important;
+    border: none;
+    background: none;
+}
+
+.scrollButton:hover {
+    color: var(--grn-md);
+    transition: .4s ease-out;
+}
+
 @media only screen and (max-width: 768px) {
     .scroller {
         display: none;

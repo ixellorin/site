@@ -26,7 +26,7 @@ import WebsiteIcon from '../components/icons/WebsiteIcon';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
-  const [doScroll, setDoScroll] = useState(null);
+  const [doScroll, setDoScroll] = useState({doScroll: false, dir: "incr"});
 
   const aboutRef = useRef(null)
   const experienceRef = useRef(null)
@@ -113,6 +113,40 @@ export default function Home() {
     }
   ]
 
+  const [sectionIndex, setSectionIndex] = useState(0)
+
+  const sectionIndexMap = {}
+
+  scrollerSections.map((section, n) => {
+    sectionIndexMap[n] = section.target
+  })
+  
+  useEffect(() => {
+    if (doScroll["doScroll"]) {
+      if (doScroll["dir"] == "incr") {
+        sectionIndexMap[sectionIndex].current.scrollIntoView({ behavior: "smooth", alignToTop: true})
+      } else {
+        sectionIndexMap[sectionIndex].current.scrollIntoView({ behavior: "smooth", alignToTop: true})
+      }
+    }
+  }, [doScroll]); // Empty array ensures that effect is only run on mount
+
+  function incrSection() {
+    console.log("increment!")
+    console.log(sectionIndex)
+    if (sectionIndex < scrollerSections.length - 1 && sectionIndexMap[sectionIndex + 1] != null && sectionIndexMap[sectionIndex + 1].current != null) {
+      setSectionIndex(sectionIndex + 1)
+      setDoScroll({doScroll: true, dir: "incr"})
+    }
+  }
+
+  function decrSection() {
+    if (sectionIndex  > 0 && sectionIndexMap[sectionIndex - 1] != null && sectionIndexMap[sectionIndex - 1].current != null) {
+      setSectionIndex(sectionIndex - 1)
+      setDoScroll({doScroll: true, dir: "decr"})
+    }    
+  }
+
   return (
     <div>
       <Head>
@@ -124,7 +158,7 @@ export default function Home() {
       <main>
         <Landing />
         <Nodes nodes={nodes} />
-        <Scroller sections={scrollerSections} active={null} />
+        <Scroller sections={scrollerSections} active={null} incrSection={incrSection} decrSection={decrSection}/>
         <About ref={aboutRef} />
         <Experience ref={experienceRef} />
         <Projects projects={projects} ref={projectsRef} />

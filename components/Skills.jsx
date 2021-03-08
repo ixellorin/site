@@ -91,7 +91,7 @@ export default function Skills(props) {
             </Grid>
             <Grid container justify="flex-start" className={styles.legend}>
                 <Grid item xs={1}/>
-                <Grid item xs={2.2}>
+                <Grid item xs={2.2} className={styles.legendratefirstcontainer}>
                     <SkillRating label={"Learning:"} rating={1} max={max} legend={true}/>
                 </Grid>
                 <Grid item xs={2.2} className={styles.legendratecontainer}>
