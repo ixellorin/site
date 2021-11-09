@@ -2,18 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Lobster&display=swap');
 
 :root {
-    --grey-dk: #121212;
-    --grey-md: #626D71;
-    --grn-dk: #128277;
-    --grn-md: #6FB98F;
-    --grn-lt: #BDE7CF;
-    --grn-lt-2: #EEFFF5;
+    --dk-grey: #121212;
+    --md-grey: #626D71;
+    --grn: #6FB98F;
     --white: #FFFFFF;
-    --blue-lt: #F1F1F2;
-    --blue-md: #4D85D5;
-    --blue-lt-f: #F2F1FF;
-    --blue-dk: #102A49;
-    --yellow: #F8F1DC;
+    --lt-blue: #F1F1F2;
+    --md-blue: #4D85D5;
     --black: #000000;
 }
 
@@ -72,7 +66,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .link-insta-button {
     color: white;
-    background: var(--blue-md);
+    background: var(--md-blue);
     outline: none;
     border-radius: 4px;
     padding: 1px 12px 1px 15px;
@@ -119,7 +113,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    color: var(--grey-dk);
+    color: var(--dk-grey);
     border-radius: 4px;
     font-size: 1rem;
     outline: none;
