@@ -19,6 +19,10 @@ function Projects(props, ref) {
             <div className={styles.credit}>
                 <small>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a>, <a href="https://www.freepik.com" title="Freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a>, and <a href="https://www.flaticon.com/authors/roundicons-freebies" title="Roundicons Freebies">Roundicons Freebies</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            This site is still under construction - more coming soon!
         </div>
     )
 }
