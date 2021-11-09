@@ -20,7 +20,7 @@ export default function Landing(props) {
                         <div className={styles.name}>
                             CIO ELLORIN
                         </div>
-                        Software Developer, UI/UX Enthusiast, Star Wars fan.
+                        Software Developer, UI/UX Learner, Star Wars fan.
                     </div>
                     <Icon path={mdiChevronDoubleDown}
                         title="Chevron Double Down"

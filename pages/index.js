@@ -113,13 +113,31 @@ export default function Home() {
     }
   ]
 
-  const [sectionIndex, setSectionIndex] = useState(0)
+  const [sectionIndex, setSectionIndex] = useState(Number(0))
 
   const sectionIndexMap = {}
 
   scrollerSections.map((section, n) => {
     sectionIndexMap[n] = section.target
   })
+
+  const handleScroll = () => {
+    for (const section in Object.keys(sectionIndexMap)) {
+      if (sectionIndexMap[section] != null) {
+        if (-100 < sectionIndexMap[section].current.getBoundingClientRect().top
+          && sectionIndexMap[section].current.getBoundingClientRect().top < 100) {
+          console.log("Setting current section", section)
+          setSectionIndex(section)
+        }
+      }
+    }
+  }
+  
+  useEffect(() => {
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
   
   useEffect(() => {
     if (doScroll["doScroll"]) {
@@ -132,19 +150,26 @@ export default function Home() {
   }, [doScroll]); // Empty array ensures that effect is only run on mount
 
   function incrSection() {
-    console.log("increment!")
-    console.log(sectionIndex)
-    if (sectionIndex < scrollerSections.length - 1 && sectionIndexMap[sectionIndex + 1] != null && sectionIndexMap[sectionIndex + 1].current != null) {
-      setSectionIndex(sectionIndex + 1)
-      setDoScroll({doScroll: true, dir: "incr"})
-    }
+    scrollerSections.map((section, n) => {
+      if (n == Number(sectionIndex) + 1) {
+        if (sectionIndex < scrollerSections.length - 1 && scrollerSections[n + 1] != null) {
+          console.log(section.target, n)
+          section.target.current.scrollIntoView({ behavior: "smooth", alignToTop: true})
+        }
+      }
+    })
   }
 
   function decrSection() {
-    if (sectionIndex  > 0 && sectionIndexMap[sectionIndex - 1] != null && sectionIndexMap[sectionIndex - 1].current != null) {
-      setSectionIndex(sectionIndex - 1)
-      setDoScroll({doScroll: true, dir: "decr"})
-    }    
+    scrollerSections.map((section, n) => {
+      console.log(n, Number(sectionIndex), n == Number(sectionIndex) - 1, scrollerSections[n - 1])
+      if (n == Number(sectionIndex) - 1) {
+        if (sectionIndex > 0 && scrollerSections[sectionIndex - 1] != null) {
+          console.log(section.target, n)
+          section.target.current.scrollIntoView({ behavior: "smooth", alignToTop: true})
+        }
+      }
+    })
   }
 
   return (

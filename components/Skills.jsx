@@ -19,7 +19,6 @@ export default function Skills(props) {
     ];
 
     const beSkillset = [
-        { label: 'Node.js', rating: 3 },
         { label: 'GraphQL', rating: 2 },
         { label: 'Python', rating: 3 },
         { label: 'Flask', rating: 3 },
