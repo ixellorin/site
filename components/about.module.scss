@@ -2,8 +2,8 @@
     width: 100%;
     min-height: 100vh;
     text-align: center;
-    background: var(--lt-blue);
-    color: var(--md-grey);
+    background: var(--blue-lt);
+    color: var(--grey-md);
     padding-left: 117px;
     padding-right: 391px;
     position: relative;
@@ -27,7 +27,7 @@
 
 .header {
     margin-top: 50px;
-    border: 3px solid var(--md-grey);
+    border: 3px solid var(--grey-md);
     padding: 25px 50px;
     position: relative;
 }
@@ -39,7 +39,7 @@
     top: -30px;
     left: calc(50% - 100px);
     padding: 10px 15px;
-    background: var(--lt-blue);
+    background: var(--blue-lt);
 }
 
 .name {

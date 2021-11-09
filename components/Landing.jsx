@@ -7,7 +7,7 @@ import { mdiChevronDoubleDown } from '@mdi/js';
 
 export default function Landing(props) {
     return (
-        <div className={styles.landing}>
+        <div className={styles.landing} id="landing">
             <Grid container alignContent="center" alignItems="center" justify="center" className={styles.landing}>
                 <Grid item justify="center">
                     <div className={styles.profile}>
@@ -20,7 +20,7 @@ export default function Landing(props) {
                         <div className={styles.name}>
                             CIO ELLORIN
                         </div>
-                        Software Developer, UI/UX Enthusiast, Star Wars fan.
+                        Software Developer, UI/UX Learner, Star Wars fan.
                     </div>
                     <Icon path={mdiChevronDoubleDown}
                         title="Chevron Double Down"

@@ -1,12 +1,12 @@
-.card {    
+.card {
     outline: none !important;
     border: none;
     background: none;
-    color: var(--md-grey);
+    color: var(--grey-md);
     transition: all .2s ease-out;
 
     svg {
-        stroke: var(--md-grey) !important;
+        stroke: var(--grey-md) !important;
         stroke-width: 3px;
         fill: none;
         transition: all .2s ease-out;
@@ -19,7 +19,7 @@
     }
 
     &.active {
-        color: var(--md-blue);
+        color: var(--blue-md);
     }
 }
 
@@ -39,10 +39,10 @@
     cursor: pointer;
 
     svg {
-        stroke: var(--grn) !important;
+        stroke: var(--grn-md) !important;
     }
     
     .label {
-        color: var(--grn);
+        color: var(--grn-md);
     }
 }

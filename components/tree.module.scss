@@ -1,11 +1,11 @@
 .node {
     fill: #FFFFFF;
-    stroke: var(--md-grey);
+    stroke: var(--grey-md);
     stroke-width: 3px;
 }
 
 .stem {
-    stroke: var(--md-grey);
+    stroke: var(--grey-md);
     stroke-width: 3px;
 }
 
@@ -16,7 +16,7 @@
 
 .start {
     font-size: 75px;
-    color: var(--md-grey);
+    color: var(--grey-md);
     padding-bottom: 25px;
 }
 
@@ -96,7 +96,7 @@
 @media screen and (max-width: 1199px) and (min-width: 992px) {
     .start {
         font-size: 50px;
-        color: var(--md-grey);
+        color: var(--grey-md);
         padding-bottom: 25px;
     }
 

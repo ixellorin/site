@@ -1,16 +1,12 @@
-
+import React from 'react';
 import Image from 'next/image';
 import { Grid } from '@material-ui/core';
-import Hidden from '@material-ui/core/Hidden';
-import Scroller from '../components/Scroller';
-
-import { useState, useEffect } from 'react';
 import styles from './about.module.scss';
 
-export default function About(props) {
+function About(props, ref) {
 
     return (
-        <div className={styles.about}>
+        <div className={styles.about} id="about" ref={ref}>
             <Grid container alignContent="center" alignItems="center" justify="space-between" className={styles.writeupGrid}>
                 <Grid item justify="flex-start" xs={12} lg={4}>
                     <div className={styles.profile}>
@@ -50,3 +46,5 @@ export default function About(props) {
         </div>
     )
 }
+
+export default React.forwardRef(About)
