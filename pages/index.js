@@ -49,7 +49,7 @@ export default function Home() {
     {
       title: 'Website',
       languages: 'Next.js, HTML, CSS',
-      description: 'Designed and prototyped in Adobe XD, developed from the ground-up in Next.JS, and deployed to GitHub Pages to serve as a personal website. Getting in some practice with React/Next.JS.',
+      description: 'An ongoing work, designed and prototyped in Adobe XD, developed from the ground-up in Next.JS, and deployed to GitHub Pages to serve as a personal website. Getting in some practice with React/Next.JS.',
       icon: <WebsiteIcon />,
     },
     {
