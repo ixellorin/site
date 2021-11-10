@@ -22,7 +22,7 @@ function Projects(props, ref) {
             <br/>
             <br/>
             <br/>
-            This site is still under construction - more coming soon!
+            This site is still under construction - more coming soon! Visit my old site at <a href="https://site-ixellorin.vercel.app/" title="old site">here</a>.
         </div>
     )
 }
