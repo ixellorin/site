@@ -4,8 +4,8 @@
     text-align: center;
     background: var(--blue-lt);
     color: var(--grey-md);
-    padding-left: 117px;
-    padding-right: 391px;
+    padding-left: 8%;
+    padding-right: 20%;
     position: relative;
     padding-bottom: 50px;
     padding-top: 50px;
@@ -94,7 +94,7 @@
 
 @media screen and (max-width: 1200px) and (min-width: 769px) {
     .about {
-        padding-left: 75px;
+        padding-left: 6%;
         padding-right: 300px;
         padding-top: 100px;
     }

@@ -17,7 +17,6 @@ export default function Jobs(props) {
                             <>
                                 <Grid item xs={1} />
                                 <JobCard job={job} key={n}/>
-                                <Grid item xs={1} />
                             </>
                         )
                     })}

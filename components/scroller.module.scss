@@ -1,15 +1,20 @@
 .scroller {
-    right: 100px;
+    left: 100%;
+    margin-right: 36px;
     position: -webkit-sticky;
     position: sticky;
-    top: 0px;
+    top: 32px;
     z-index: 200;
     height: 0px;
     overflow: visible;
-    transform: scale(.8) translateY(calc(calc(100vh - 708px) / 2)) translateX(50vw);
+    // transform: scale(.8) translateY(calc(calc(100vh - 708px) / 2)) translateX(50vw);
+    
 }
 
 .scrollButton {
+    svg {
+        stroke: var(--grey-md) !important;
+    }
     outline: none !important;
     border: none;
     background: none;
@@ -28,7 +33,7 @@
 
 @media screen and (max-width: 1279px) {
     .scroller {
-        transform: scale(.8) translateY(calc(calc(100vh - 708px) / 2)) translateX(calc(50vw - 50px));
+        // transform: scale(.8) translateY(calc(calc(100vh - 708px) / 2)) translateX(calc(50vw - 50px));
     }
 
     .name {
