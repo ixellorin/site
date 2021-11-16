@@ -47,7 +47,7 @@ export default function Skills(props) {
             <h1>Skillset</h1>
             <Grid container className={styles.offsetter} justifyContent="space-evenly" spacing={10} columns={{ md: 10 }}>
                 <Grid item md={8}>
-                    <div className={styles.skillsHeader}>Languages & Libraries</div>
+                    <div className={styles["skills__header"]}>Languages & Libraries</div>
                 </Grid>
                 <Box component={Grid} item md={2} display={{ xs: "none", md: "block" }}>
                 </Box>
@@ -66,7 +66,7 @@ export default function Skills(props) {
             </Grid>
             <Grid container className={styles.offsetter} justifyContent="space-evenly" spacing={10} columns={{ md: 10 }}>
                 <Grid item md={8}>
-                    <div className={styles.skillsHeader}>Tools and Other Skills</div>
+                    <div className={styles["skills__header"]}>Tools and Other Skills</div>
                 </Grid>
                 <Box component={Grid} item md={2} display={{ xs: "none", md: "block" }}>
                 </Box>
