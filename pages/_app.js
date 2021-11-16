@@ -5,8 +5,8 @@ export default function App({ Component, pageProps }) {
         <div>
             <Head>
             <meta charSet="utf-8" property="og:url" content="http://www.printr.ca/" />
-            <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-            <meta itemprop="image" content="favicon.ico"/>
+            <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> 
+            <meta itemprop="image" content="/icons/cio-logo-small.png"/>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="theme-color" content="#000000" />
             <meta
