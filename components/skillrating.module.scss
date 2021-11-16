@@ -1,5 +1,5 @@
-.skillrating {
-    font-size: 25px;
+.skill-rating {
+    font-size: 24px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -54,15 +54,137 @@
     }
 }
 
-.skillrating:not(:first-child) {
+.skill-rating:not(:first-child) {
     margin-top: 10px;
 }
 
-.skillrating:first-child {
+.skill-rating:first-child {
     margin-top: 25px;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@media only screen and (max-width: 550px) {
+    
+    .skill-rating {
+        font-size: 18px;
+        .rating {
+            height: 14px;
+            width: 14px;
+    
+            &.legend {
+                height: 8px !important;
+                width: 8px !important;
+            }
+        }
+        
+        .rating:not(:first-child) {
+            margin-left: 4px;
+    
+            &.legend {
+                margin-left: 7px;
+            }
+        }
+        
+        .rate {
+            width: 100%;
+            max-width: 120px;
+            text-align: right;
+            
+            &:not(.legend) {
+                min-width:120px;            
+            }        }
+    }
+
+    .skill-rating:first-child {
+        margin-top: 14px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 767px) {
+    .skill-rating {
+        font-size: 18px;
+        .rating {
+            height: 14px;
+            width: 14px;
+    
+            &.legend {
+                height: 8px !important;
+                width: 8px !important;
+            }
+        }
+        
+        .rating:not(:first-child) {
+            margin-left: 4px;
+    
+            &.legend {
+                margin-left: 7px;
+            }
+        }
+        
+        .rate {
+            width: 100%;
+            max-width: 120px;
+            text-align: right;
+            
+            &:not(.legend) {
+                min-width:120px;            
+            }        }
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .start {
+        font-size: 50px;
+        padding-bottom: 25px;
+    }
+    .computer {
+        overflow: visible;
+        path {
+            transform: translateX(-100px);
+        }
+    }
+    
+    .description {
+        padding-top: 25px;
+        font-size: 18px;
+        max-width: 750px;
+    }
+}
+
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .skill-rating {
+        font-size: 18px;
+        .rating {
+            height: 14px;
+            width: 14px;
+    
+            &.legend {
+                height: 8px !important;
+                width: 8px !important;
+            }
+        }
+        
+        .rating:not(:first-child) {
+            margin-left: 4px;
+    
+            &.legend {
+                margin-left: 7px;
+            }
+        }
+        
+        .rate {
+            width: 100%;
+            max-width: 120px;
+            text-align: right;
+            
+            &:not(.legend) {
+                min-width:120px;            
+            }        }
+    }
 }

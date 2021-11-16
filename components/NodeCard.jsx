@@ -6,7 +6,7 @@ export default function NodeCard(props) {
     const icon = props.icon
 
     return (
-        <Grid item className={styles.cardContainer} onMouseEnter={() => props.handleHover(props.description)} onMouseLeave={() => props.handleLeave(props.description)} onClick={() => {
+        <Grid item className={styles["node-grid-item"]} onMouseEnter={() => props.handleHover(props.description)} onMouseLeave={() => props.handleLeave(props.description)} onClick={() => {
             if (props.target && props.target.current) {
                 props.target.current.scrollIntoView({ behavior: "smooth", alignToTop: true})
             }

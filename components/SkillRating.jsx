@@ -15,7 +15,7 @@ export default function SkillRating(props) {
     }
 
     return (
-        <div className={ props.legend ? `${styles.skillrating} ${styles.legend}` : styles.skillrating}>
+        <div className={ props.legend ? `${styles["skill-rating"]} ${styles.legend}` : styles["skill-rating"]}>
             <div className={ props.legend ? `${styles.label} ${styles.legend}` : styles.label }>
                 {props.label}
             </div>

@@ -7,7 +7,7 @@ function About(props, ref) {
 
     return (
         <div className={styles.about} id="about" ref={ref}>
-            <Grid container alignContent="center" alignItems="center" justify="space-between" className={styles.writeupGrid}>
+            <Grid container alignContent="center" alignItems="center" justify="space-between" className={styles["writeup-grid"]}>
                 <Grid item justify="flex-start" xs={12} lg={4}>
                     <div className={styles.profile}>
                         <Image src="/images/profile.jpg"

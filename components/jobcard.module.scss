@@ -1,4 +1,4 @@
-.container {
+.job-card {
     text-align: left;
     font-size: 1.2em;
     margin-top: 110px;
@@ -12,7 +12,7 @@
     }
 }
 
-@media screen and (min-width: 1921px) {
-    .container {
-    }
+.hackathon-card__img {
+    width: 100%;
+    text-align: center;
 }

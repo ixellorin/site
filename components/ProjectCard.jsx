@@ -34,8 +34,8 @@ export default function ProjectCard (props) {
     }
 
     return (
-        <Grid item sm={12} md={4} className={styles.projectcard}>
-            <div className={styles.container}>
+        <Grid item sm={12} md={4} className={styles["project-grid-item"]}>
+            <div className={styles["project-grid-item__card"]}>
                 <div className={styles.profile}>
                     {props.project.icon}
                 </div>

@@ -10,14 +10,12 @@ export default function Hackathons(props) {
     return (
         <div className={styles.hackathons}>
             <h1>Hackathons</h1>
-            <Grid container justify="center">
+            <Grid container justifyContent="space-evenly" columnSpacing={10} columns={{ md: 8 }}>
                 {(props.hackathons || []).map((hackathon, n) => {
                     return (
-                    <>
-                        <Grid item xs={1} />
+                    <Grid item md={5}>
                         <HackathonCard hackathon={hackathon} key={n}/>
-                        <Grid item xs={1} />
-                    </>)
+                    </Grid>)
                 })}
             </Grid>
         </div>

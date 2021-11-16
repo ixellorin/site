@@ -18,18 +18,24 @@
     }
 }
 
-.legendratecontainer {
+.legend__item {
     padding-top: 50px;
     padding-left: 25px;
 }
 
-.legendratefirstcontainer {
+.legend__item--first {
     padding-top: 50px;
 }
 
 @media screen and (max-width: 550px) {
+    .skillset {
+        padding-right: 8%;
+    }
     .legend {
         display: none !important;
+    }
+    .ratings {
+        padding: 14px !important;
     }
 }
 
@@ -45,25 +51,23 @@
         padding-right: 300px;
         padding-top: 100px;
     }
+    .legend__item {
+        padding-top: 10px;
+        padding-left: 25px;
+    }
+    
+    .legend__item--first {
+        padding-top: 10px;
+    }
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1280px) {
+    .legend__item {
+        padding-top: 10px;
+        padding-left: 25px;
+    }
+    
+    .legend__item--first {
+        padding-top: 10px;
+    }
 }
-
-// @media screen and (max-width: 1279px) and (min-width: 1201px) {
-//     .skillset {
-//         padding-top: 100px;
-//         padding-bottom: 10%;
-//         padding-left: 75px;
-//         padding-right: 300px;
-//     }
-// }
-
-
-
-// @media screen and (max-width: 1500px) and (min-width: 1280px) {
-//     .skillset {
-//         padding-left: 75px;
-//         padding-right: 300px;
-//     }
-// }

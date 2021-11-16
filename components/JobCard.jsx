@@ -6,8 +6,8 @@ export default function JobCard(props) {
 
     return (
         <Grid item sm={12} md={4}>
-            <div className={styles.container}>
-                <div className={styles.profile}>
+            <div className={styles["job-card"]}>
+                <div className={styles["job-card__img"]}>
                     <Image src={props.job.img}
                     height={props.job.imgHeight}
                     width={props.job.imgWidth}

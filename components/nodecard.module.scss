@@ -1,4 +1,4 @@
-.cardContainer {
+.node-grid-item {
     height: 300px;
     width: 300px;
 }
@@ -103,7 +103,7 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 767px) {
-    .cardContainer {
+    .node-grid-item {
         height: 250px;
         width: 250px;
     }
@@ -124,7 +124,7 @@
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
-    .cardContainer {
+    .node-grid-item {
         height: 250px;
         width: 185px;
     }
@@ -150,7 +150,7 @@
 }
 
 @media screen and (max-width: 1200px) and (min-width: 993px) {
-    .cardContainer {
+    .node-grid-item {
         height: 250px;
         width: 225px;
     }

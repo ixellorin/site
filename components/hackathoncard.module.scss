@@ -1,8 +1,7 @@
-.container {
+.hackathon-card {
     text-align: left;
     font-size: 1.2em;
     margin-top: 110px;
-    padding-left: 20%;
     
     .text {
         margin-top: 30px;
@@ -13,13 +12,19 @@
     }
 }
 
-.profile {
+.hackathon-card__img {
     width: 100%;
     text-align: center;
 }
 
+@media screen and (max-width: 550px) {
+    .hackathons {
+        padding-left: auto;
+    }
+}
+
 @media screen and (min-width: 1921px) {
-    .container {
+    .hackathon-card {
         padding-left: calc(10% + 150px);
     }
 }
