@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
             <meta name="theme-color" content="#000000" />
             <meta
                 name="description"
-                content="Web site created using create-react-app"
+                content="Cio Ellorin: Software Developer, UI/UX Learner, Star Wars fan."
             />
             <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
             {/* <!--
