@@ -15,7 +15,7 @@ const ProjectCard = ({ project }: IProjectCardProps) => {
 
     if (project.gitHubURL && project.gitHubURL !== '') {
         links.push(
-            <Tooltip label="View source code on GitHub" hasArrow={true} bg={'primary.blue.100'} color={'white'} key={project.title}>
+            <Tooltip label="View source code on GitHub" hasArrow={true} bg={'primary.blue.100'} color={'white'} key={`${project.title}-1`}>
                 <a href={project.gitHubURL} target="_blank" rel="noreferrer">
                     <MDIIcon icon={mdiGithub} boxSize={8}/>
                 </a>
@@ -24,7 +24,7 @@ const ProjectCard = ({ project }: IProjectCardProps) => {
 
     if (project.externalURL && project.externalURL !== '') {
         links.push(
-            <Tooltip label="Visit project" hasArrow={true} bg={'primary.blue.100'} color={'white'} key={project.title}>
+            <Tooltip label="Visit project" hasArrow={true} bg={'primary.blue.100'} color={'white'} key={`${project.title}-2`}>
                 <a href={project.externalURL} target="_blank" rel="noreferrer">
                     <MDIIcon icon={mdiOpenInNew} boxSize={8}/>
                 </a>

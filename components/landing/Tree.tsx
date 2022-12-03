@@ -24,58 +24,56 @@ const Tree = ({ nodes }: ITreeProps): JSX.Element => {
     const head = { label: 'Head'};
 
     return (
-        <Box id="nodes"
-        h={'100vh'}
+        <VStack
+        alignContent="center"
+        alignItems="center"
+        justify="center"id="nodes"
+        minHeight={'100vh'}
         w={'100%'}
-        textAlign={'center'}>
-            <VStack
-            alignContent="center"
-            alignItems="center"
-            justify="center"
-            h={'100%'}
-            spacing={10}>
-                <VStack>
-                    <Heading><span>Let&apos;s get started!</span></Heading>
-                    <Box pt={14}>
-                        <Show above={'md'}>
-                            <svg id="nodes" width={treeWidth} className={styles.tree}>
-                                <line x1="50%" y1="13" x2="50%" y2="95" className={styles.stem}/>
-                                <line x1="40" y1="95" x2="100%" y2="95" transform="translate(-20,0)" className={styles.stem}/>
-                                {nodes.map((node, n) => {
-                                    if (n == 0) {
-                                        return <circle key={n} cx="13" cy="95" r="10" className={styles.node} />
-                                    } else if (n < nodes.length - 1) {
-                                        return <circle key={n} cx={(treeWidth/(nodes.length - 1)) * n} cy="95" r="10" className={styles.node} />
-                                    } else {
-                                        return <circle key={n} cx="100%" transform="translate(-13,0)" cy="95" r="10" className={styles.node} />
-                                    }
-                                })}
-                                <circle cx="50%" cy="13" r="10" className={styles.node}/>
-                            </svg>
-                        </Show>
-                    </Box>
-                </VStack>
-                <Show above={'md'}>
-                    <HStack justify="space-around" alignItems="center" w={treeWidth + offset} px={8}>
-                        {nodes.map((node, n) => {
-                            return(<NodeCard useAutoWidth={true} key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description} target={node.target}/>)
-                        })}
-                    </HStack>
-                </Show>
-                <Hide above={'md'}>
-                    <Wrap justify="space-around" alignItems="center"  w={treeWidth + offset}>
-                        {nodes.map((node, n) => {
-                            return(<NodeCard key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description} target={node.target}/>)
-                        })}
-                    </Wrap>
-                </Hide>
-                <Show above={'md'}>
-                    <Box minHeight={'50px'}>
-                        <Heading size={'md'}>{description}</Heading>
-                    </Box>
-                </Show>
+        textAlign={'center'}
+        h={'fill'}
+        spacing={10}>
+            <VStack>
+                <Heading><span>Let&apos;s get started!</span></Heading>
+                <Box pt={[1,2,4,8,14]}>
+                    <Show above={'md'}>
+                        <svg id="nodes" width={treeWidth} className={styles.tree}>
+                            <line x1="50%" y1="13" x2="50%" y2="95" className={styles.stem}/>
+                            <line x1="40" y1="95" x2="100%" y2="95" transform="translate(-20,0)" className={styles.stem}/>
+                            {nodes.map((node, n) => {
+                                if (n == 0) {
+                                    return <circle key={n} cx="13" cy="95" r="10" className={styles.node} />
+                                } else if (n < nodes.length - 1) {
+                                    return <circle key={n} cx={(treeWidth/(nodes.length - 1)) * n} cy="95" r="10" className={styles.node} />
+                                } else {
+                                    return <circle key={n} cx="100%" transform="translate(-13,0)" cy="95" r="10" className={styles.node} />
+                                }
+                            })}
+                            <circle cx="50%" cy="13" r="10" className={styles.node}/>
+                        </svg>
+                    </Show>
+                </Box>
             </VStack>
-        </Box>
+            <Show above={'md'}>
+                <HStack justify="space-around" alignItems="center" w={treeWidth + offset} px={8}>
+                    {nodes.map((node, n) => {
+                        return(<NodeCard useAutoWidth={true} key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description} target={node.target}/>)
+                    })}
+                </HStack>
+            </Show>
+            <Hide above={'md'}>
+                <Wrap justify="space-around" alignItems="center"  w={treeWidth + offset}>
+                    {nodes.map((node, n) => {
+                        return(<NodeCard key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description} target={node.target}/>)
+                    })}
+                </Wrap>
+            </Hide>
+            <Show above={'md'}>
+                <Box minHeight={'50px'}>
+                    <Heading size={'md'}>{description}</Heading>
+                </Box>
+            </Show>
+        </VStack>
     );
 };
 
