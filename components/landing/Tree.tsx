@@ -30,8 +30,9 @@ const Tree = ({ nodes }: ITreeProps): JSX.Element => {
         justify="center"id="nodes"
         minHeight={'100vh'}
         w={'100%'}
-        textAlign={'center'}
         h={'fill'}
+        py={'10%'}
+        textAlign={'center'}
         spacing={10}>
             <VStack>
                 <Heading><span>Let&apos;s get started!</span></Heading>
