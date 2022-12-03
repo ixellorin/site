@@ -5,7 +5,7 @@ const About = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined): R
 
     return (
             <HStack alignContent="center" alignItems="center" w={'100%'} id="about" ref={ref} py={'10%'} spacing={48}>
-                <Show md="lg">
+                <Show above="md">
                     <Center>
                         <VStack>
                                 <Image src="/images/profile.jpg"
