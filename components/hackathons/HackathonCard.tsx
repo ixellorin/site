@@ -1,7 +1,7 @@
 import { Box, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 import { ReactElement } from 'react';
-import { IHackathon } from '../types';
+import { IHackathon } from '../../types';
 
 interface IHackathonCardProps {
     hackathon: IHackathon
