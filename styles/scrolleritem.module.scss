@@ -1,0 +1,36 @@
+.card {
+    outline: none !important;
+    border: none;
+    background: none;
+    color: var(--blue-dk);
+    transition: all .2s ease-out;
+
+    svg {
+        stroke-width: 3px;
+        fill: none;
+        transition: all .2s ease-out;
+    }
+
+    .label {
+        margin-top: 20px;
+        font-size: 30px;
+        transition: all .2s ease-out;
+    }
+
+    &.active {
+        color: var(--blue-md);
+    }
+}
+
+
+.card:hover {
+    cursor: pointer;
+
+    svg {
+        stroke: var(--grn-md) !important;
+    }
+    
+    .label {
+        color: var(--grn-md);
+    }
+}

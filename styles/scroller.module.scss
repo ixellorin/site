@@ -1,0 +1,39 @@
+.scroller {
+    left: calc(100% - 200px);
+    margin-right: 36px;
+    position: -webkit-sticky;
+    position: sticky;
+    top:25%;
+    z-index: 200;
+    height: 0px;
+    overflow: visible;
+    // transform: scale(.8) translateY(calc(calc(100vh - 708px) / 2)) translateX(50vw);
+    
+}
+
+.scrollButton {
+    outline: none !important;
+    border: none;
+    background: none;
+}
+
+.scrollButton:hover {
+    svg {
+        color: var(--grn-md) !important;
+        stroke: var(--grn-md) !important;
+        transition: .4s ease-out;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .scroller {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .name {
+        font-size: 2.5em;
+        margin-bottom: 50px;
+    }
+}

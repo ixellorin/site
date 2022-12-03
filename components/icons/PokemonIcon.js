@@ -9,11 +9,6 @@ function SvgComponent(props) {
       {...props}
     >
       <path
-        data-name="Path 1"
-        d="M114.588 92.9a55.74 55.74 0 11-55.739-55.737A55.739 55.739 0 01114.588 92.9zm0 0"
-        fill="#c1dbdc"
-      />
-      <path
         data-name="Path 2"
         d="M82.674 147.683c29.315 0 53.08-23.973 53.08-53.543H29.594c0 29.57 23.764 53.543 53.08 53.543zm0 0"
         fill="#fff"
