@@ -35,7 +35,7 @@ const Tree = ({ nodes }: ITreeProps): JSX.Element => {
             h={'100%'}
             spacing={10}>
                 <VStack>
-                    <Heading><span>Let's get started!</span></Heading>
+                    <Heading><span>Let&apos;s get started!</span></Heading>
                     <Box pt={14}>
                         <Show above={'md'}>
                             <svg id="nodes" width={treeWidth} className={styles.tree}>

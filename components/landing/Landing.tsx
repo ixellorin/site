@@ -33,7 +33,7 @@ const Landing: FC = (): ReactElement => {
                         bg={'primary.blue.400'}
                         fontFamily={'Lobster'}
                         fontSize={'1.5rem'}>
-                            Hello, World! I'm
+                            Hello, World! I&apos;m
                         </Box>
                         <Box
                         fontSize={'3rem'}

@@ -24,7 +24,7 @@ const About = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined): R
                     <Heading>About Me</Heading>
                     <br/>
                     <Text>
-                        Hi! My name is Cio and I'm a <b>Full-stack Software Developer</b> currently based in <b>Vancouver</b>. I have a passion for <b>frontend development</b> and creating products that  clients to achieve their goals in a fulfilling, seamless and enjoyable experience! I bring a teamwork-focused and end user-driven work ethic, with <b>4 years of industry experience</b> from Vancouver to Kyoto, and in organizations of all sizes.
+                        Hi! My name is Cio and I&apos;m a <b>Full-stack Software Developer</b> currently based in <b>Vancouver</b>. I have a passion for <b>frontend development</b> and creating products that  clients to achieve their goals in a fulfilling, seamless and enjoyable experience! I bring a teamwork-focused and end user-driven work ethic, with <b>4 years of industry experience</b> from Vancouver to Kyoto, and in organizations of all sizes.
                     </Text>
                     <br/>
                     <Text>
@@ -34,7 +34,7 @@ const About = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined): R
                     <Heading>My Story</Heading>
                     <br/>
                     <Text>
-                        I had my first programming experience in my high school IT class, and I immediately knew that I wanted to build software as a career! I applied to the University of British Columbia's Faculty of Science and, in my first year, declared my Major in Computer Science.
+                        I had my first programming experience in my high school IT class, and I immediately knew that I wanted to build software as a career! I applied to the University of British Columbia&apos;s Faculty of Science and, in my first year, declared my Major in Computer Science.
                     </Text>
                     <br/>
                     <Text>
@@ -42,7 +42,7 @@ const About = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined): R
                     </Text>
                     <br/>
                     <Text>
-                        Currently, I'm a Full-stack Software Developer on <b>KPMG</b> Vancouver's Data Analytics (Lighthouse) Team, and <b></b>, as well as serving as its unofficial UI/UX Designer, engaging with clients and providing data-driven solutions.
+                        Currently, I&apos;m a Full-stack Software Developer on <b>KPMG</b> Vancouver&apos;s Data Analytics (Lighthouse) Team, and <b></b>, as well as serving as its unofficial UI/UX Designer, engaging with clients and providing data-driven solutions.
                     </Text>
                 </Box>
             </HStack>

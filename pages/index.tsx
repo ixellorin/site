@@ -66,6 +66,7 @@ export default function Home() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   useEffect(() => {
@@ -76,6 +77,8 @@ export default function Home() {
         sectionIndexMap[sectionIndex].current?.scrollIntoView({ behavior: "smooth",  block: "start" })
       }
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [doScroll]); // Empty array ensures that effect is only run on mount
 
   function incrSection() {
@@ -137,7 +140,7 @@ export default function Home() {
 
       <footer>
         <small>
-          This site is still under construction - more coming soon! Visit my (really) old site at <a href="https://ixellorin.github.io/" title="old site" target="_blank">here</a>.
+          This site is still under construction - more coming soon! Visit my (really) old site at <a href="https://ixellorin.github.io/" title="old site" target="_blank" rel="noreferrer">here</a>.
         </small>
       </footer>
     </div>
