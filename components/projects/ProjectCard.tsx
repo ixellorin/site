@@ -1,7 +1,6 @@
 
-import Image from 'next/image';
 import MDIIcon from '../icons/MDIIcon';
-import { Box, HStack, Tooltip, VStack } from '@chakra-ui/react'
+import { Box, HStack, Image, Tooltip, VStack } from '@chakra-ui/react'
 import { mdiGithub } from '@mdi/js';
 import { mdiOpenInNew } from '@mdi/js';
 import { IProject } from '../../types';
@@ -35,7 +34,8 @@ const ProjectCard = ({ project }: IProjectCardProps) => {
         <VStack maxW={'300px'}>
             <VStack spacing={2}>
                 <Image src={project.icon}
-                width={100} height={100}
+                boxSize={'100px'}
+                objectFit='contain'
                 alt={project.title}/>
                 <Box fontWeight={'bold'} fontSize={'1.2em'}>{project.title}</Box>
                 <Box fontWeight={'bold'}>{project.languages}</Box>

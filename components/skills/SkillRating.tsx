@@ -21,7 +21,7 @@ const SkillRating = ({ label, legend=true, max=5, rating=0, size=14 }: ISkillRat
 
     return (
         <HStack alignContent={'start'} align={'center'} w={'100%'}>
-            <Box textAlign={'left'} fontSize={'1.1em'}>
+            <Box textAlign={'left'} fontSize={'1.1em'} maxW={200}>
                 {label}
             </Box>
             <Spacer/>

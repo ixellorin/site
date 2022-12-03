@@ -1,19 +1,17 @@
 import React, { ReactElement } from 'react';
-import Image from 'next/image';
-import { Box, Center, Heading,  HStack, Show, Text, VStack } from '@chakra-ui/react';
+import { Box, Center, Heading, HStack, Image, Show, Text, VStack } from '@chakra-ui/react';
 
 const About = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined): ReactElement => {
 
     return (
             <HStack alignContent="center" alignItems="center" w={'100%'} id="about" ref={ref} py={'10%'} spacing={48}>
-                <Show above="lg">
+                <Show md="lg">
                     <Center>
                         <VStack>
-                            <Box position={'relative'} w={'400px'} h={'400px'} borderRadius={'50%'} overflow={'hidden'}>
                                 <Image src="/images/profile.jpg"
-                                fill
+                                maxBlockSize={'400px'}
+                                borderRadius={'full'}
                                 alt="Cio Ellorin"/>
-                            </Box>
                             <Box fontSize={'3em'}>
                                 CIO ELLORIN
                             </Box>

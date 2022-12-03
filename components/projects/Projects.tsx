@@ -55,7 +55,7 @@ const Projects = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined)
           title: 'Pokémon Database',
           languages: 'SQL, PHP',
           description: 'Search through a database of Pokémon to find out information on the original 151. School Project',
-          icon: '/icons/project_icons/pokemon.svg',
+          icon: '/icons/project_icons/pokedex.svg',
           gitHubURL: 'https://github.com/ixellorin/PokemonDB',
         },
         {
@@ -69,7 +69,7 @@ const Projects = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined)
           title: 'Resource Locator Android App',
           languages: 'Java, XML',
           description: 'Locate resources centres of the Family Resource Programs of british Columbia; from my first hackathon!',
-          icon: '/icons/project_icons/website.svg',
+          icon: '/icons/project_icons/map.svg',
           gitHubURL: 'https://github.com/ixellorin/FRP-BC',
         }
       ]

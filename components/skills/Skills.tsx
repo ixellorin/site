@@ -1,7 +1,14 @@
 import SkillRating from'./SkillRating';
 
 import { ReactElement } from 'react';
-import { Box, Heading, VStack, Wrap, WrapItem } from '@chakra-ui/react';
+import { Box, Heading, VStack, Wrap, WrapItem,
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    AccordionPanel,
+    AccordionIcon,
+    Hide,
+    Show, } from '@chakra-ui/react';
 
 const Skills = (): ReactElement => {
     const max = 5
@@ -87,24 +94,58 @@ const Skills = (): ReactElement => {
                     </VStack>
                 </WrapItem>
             </Wrap>
-            
-            <Wrap justify={'space-evenly'} pt={[8, 8, 8, 24]} spacing={14}>
-                <WrapItem >
-                    <SkillRating label={"Learning:"} rating={1} max={max} legend={true}/>
-                </WrapItem>
-                <WrapItem >
-                    <SkillRating label={"Experienced:"} rating={2} max={max} legend={true}/>
-                </WrapItem>
-                <WrapItem >
-                    <SkillRating label={"Intermediate:"} rating={3} max={max} legend={true}/>
-                </WrapItem>
-                <WrapItem >
-                    <SkillRating label={"Advanced:"} rating={4} max={max} legend={true}/>
-                </WrapItem>
-                <WrapItem >
-                    <SkillRating label={"Expert:"} rating={max} max={max} legend={true}/>
-                </WrapItem>
-            </Wrap>
+            <Hide above={'md'}>
+                <Accordion w={'100%'}>
+                    <AccordionItem>
+                        <Heading>
+                            <AccordionButton>
+                                <Box flex='1' textAlign='left'>
+                                    Legend
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                        </Heading>
+                        <AccordionPanel pb={4}>
+                            <Wrap justify={'space-evenly'} pt={[8, 8, 8, 24]} spacing={14}>
+                                <WrapItem >
+                                    <SkillRating label={"Learning:"} rating={1} max={max} legend={true}/>
+                                </WrapItem>
+                                <WrapItem >
+                                    <SkillRating label={"Experienced:"} rating={2} max={max} legend={true}/>
+                                </WrapItem>
+                                <WrapItem >
+                                    <SkillRating label={"Intermediate:"} rating={3} max={max} legend={true}/>
+                                </WrapItem>
+                                <WrapItem >
+                                    <SkillRating label={"Advanced:"} rating={4} max={max} legend={true}/>
+                                </WrapItem>
+                                <WrapItem >
+                                    <SkillRating label={"Expert:"} rating={max} max={max} legend={true}/>
+                                </WrapItem>
+                            </Wrap>
+                        </AccordionPanel>
+                    </AccordionItem>
+                </Accordion>
+            </Hide>
+            <Show above={'lg'}>
+                <Wrap justify={'space-evenly'} pt={[8, 8, 8, 24]} spacing={14}>
+                    <WrapItem >
+                        <SkillRating label={"Learning:"} rating={1} max={max} legend={true}/>
+                    </WrapItem>
+                    <WrapItem >
+                        <SkillRating label={"Experienced:"} rating={2} max={max} legend={true}/>
+                    </WrapItem>
+                    <WrapItem >
+                        <SkillRating label={"Intermediate:"} rating={3} max={max} legend={true}/>
+                    </WrapItem>
+                    <WrapItem >
+                        <SkillRating label={"Advanced:"} rating={4} max={max} legend={true}/>
+                    </WrapItem>
+                    <WrapItem >
+                        <SkillRating label={"Expert:"} rating={max} max={max} legend={true}/>
+                    </WrapItem>
+                </Wrap>
+            </Show>
         </VStack>
     )
 }
