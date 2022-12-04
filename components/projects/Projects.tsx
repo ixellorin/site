@@ -10,13 +10,13 @@ const Projects = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined)
         {
           title: 'Website',
           languages: 'Next.js, HTML, CSS',
-          description: 'An ongoing work, designed and prototyped in Adobe XD, developed from the ground-up in Next.JS, and deployed to GitHub Pages to serve as a personal website. Getting in some practice with React/Next.JS.',
+          description: 'An ongoing work, designed and prototyped in Adobe XD, developed from the ground-up in Next.JS & Chakra-UI. My personal website deployed through Vercel.',
           icon: '/icons/project_icons/website.svg',
         },
         {
           title: 'My Pokémon App',
           languages: 'React, HTML, CSS',
-          description: 'Simple app made for use as a visual companion with live-streaming. Getting in some practice with React. Add Pokémon to your  collection and your party to help viewers keep track of your game status.',
+          description: 'Simple app made for use as a visual companion with live-streaming. Getting in some practice with React. Add Pokémon to your collection and your party to help viewers keep track of your game status.',
           icon: '/icons/project_icons/pokemon.svg',
           gitHubURL: 'https://github.com/ixellorin/Pokemon-React-App',
           externalURL: 'https://ixellorin.github.io/Pokemon-React-App/',
