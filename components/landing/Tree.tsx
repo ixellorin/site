@@ -31,7 +31,7 @@ const Tree = ({ nodes }: ITreeProps): JSX.Element => {
         minHeight={'100vh'}
         w={'100%'}
         h={'fill'}
-        py={'10 %'}
+        py={'10%'}
         textAlign={'center'}
         spacing={10}>
             <VStack>

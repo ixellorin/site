@@ -14,7 +14,7 @@ const Landing: FC = (): ReactElement => {
                 <VStack justify='center'>
                     <Box 
                     position={'relative'}
-                    w={['200px', '400px']} h={['200px', '400px']}
+                    w={['250px', '400px']} h={['250px', '400px']}
                     borderRadius={'50%'}
                     overflow={'hidden'}
                     mb={'30px'}>

@@ -20,7 +20,7 @@ const NodeCard = ({ description, icon, label, target, handleHover, handleLeave, 
     const windowWidth = useWindowSize();
     
     useEffect(() => {
-        setWidth(useAutoWidth ? Math.min(300, ((windowWidth / 4) - 14)) : 300)
+        setWidth(useAutoWidth ? Math.min(300, ((windowWidth / 4) - 14)) : ((windowWidth / 2) - 14))
         
     }, [windowWidth, useAutoWidth])
 
