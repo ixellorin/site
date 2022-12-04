@@ -95,7 +95,7 @@ const Skills = (): ReactElement => {
                 </WrapItem>
             </Wrap>
             <Hide above={'md'}>
-                <Accordion w={'100%'}>
+                <Accordion w={'100%'} defaultIndex={[0]} allowMultiple>
                     <AccordionItem>
                         <Heading>
                             <AccordionButton>
