@@ -9,7 +9,7 @@ interface IJobCardProps {
 const JobCard = ({ job }: IJobCardProps): ReactElement => {
 
     return (
-            <VStack spacing={10}>
+            <VStack spacing={[2, 10]}>
                 <Center w={'100%'}>
                     <Image src={job.img}
                     boxSize={['120px', '120px', '200px']}
@@ -20,7 +20,7 @@ const JobCard = ({ job }: IJobCardProps): ReactElement => {
                     <Box fontWeight={'bold'}>{job.company}</Box>
                     <Box fontWeight={'bold'}>{job.title}</Box>
                     <Box fontWeight={'bold'}>{job.date}</Box>
-                    <VStack mt={'30px'} w={'100%'} textAlign={'left'}>
+                    <VStack mt={['10px','30px']} w={'100%'} textAlign={'left'}>
                         {
                             (job.hooks || []).map((hook, n) => {
                                 return (<Box key={n} w={'100%'} textAlign={'left'}>{hook}</Box>)

@@ -47,7 +47,7 @@ const Skills = (): ReactElement => {
     return (
         <VStack py={'10%'} spacing={14}>
             <Heading>Skillset</Heading>
-            <Wrap w={['100%', '100%', '75%']} justify={'space-between'} spacing={14}>
+            <Wrap w={['100%', '100%', '75%']} justify={'space-between'} spacing={[2, 2,14]}>
                 <WrapItem>
                     <VStack textAlign={'left'}>
                         <Box alignItems={'start'} w={'100%'} mb={'8px'}>
