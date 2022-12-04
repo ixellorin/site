@@ -140,7 +140,7 @@ export default function Home() {
 
       <footer>
         <small>
-          This site is still under construction - more coming soon! Visit my (really) old site at <a href="https://ixellorin.github.io/" title="old site" target="_blank" rel="noreferrer">here</a>.
+          This site is still under construction - more coming soon! Visit my (really) old site at <a href="https://ixellorin.github.io/" title="old site" target="_blank" rel="noreferrer">https://ixellorin.github.io/</a>
         </small>
       </footer>
     </div>
