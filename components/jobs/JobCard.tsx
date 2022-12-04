@@ -16,7 +16,7 @@ const JobCard = ({ job }: IJobCardProps): ReactElement => {
                     objectFit='contain'
                     alt="Cio Ellorin"/>
                 </Center>
-                <Box textAlign={'left'} fontSize={'1.2em'}>
+                <Box textAlign={'left'} w={'100%'}>
                     <Box fontWeight={'bold'}>{job.company}</Box>
                     <Box fontWeight={'bold'}>{job.title}</Box>
                     <Box fontWeight={'bold'}>{job.date}</Box>

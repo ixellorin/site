@@ -10,7 +10,7 @@ interface IHackathonCardProps {
 const HackathonCard = ({ hackathon }: IHackathonCardProps): ReactElement => {
 
     return (
-        <VStack>
+        <VStack spacing={10}>
             <Box>
                 <Image src={hackathon.img}
                 height={hackathon.imgHeight}
