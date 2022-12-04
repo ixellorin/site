@@ -8,13 +8,13 @@ const About = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined): R
                 <Show above="md">
                     <Center>
                         <VStack>
-                                <Image src="/images/profile.jpg"
-                                maxBlockSize={'400px'}
-                                borderRadius={'full'}
-                                alt="Cio Ellorin"/>
-                            <Box fontSize={'3em'}>
+                            <Image src="/images/profile.jpg"
+                            maxBlockSize={'400px'}
+                            borderRadius={'full'}
+                            alt="Cio Ellorin"/>
+                            <Heading>
                                 CIO ELLORIN
-                            </Box>
+                            </Heading>
                         </VStack>
                     </Center>
                 </Show>

@@ -9,6 +9,7 @@ import { Box, Heading, VStack, Wrap, WrapItem,
     AccordionIcon,
     Hide,
     Show, } from '@chakra-ui/react';
+import Head from 'next/head';
 
 const Skills = (): ReactElement => {
     const max = 5
@@ -49,8 +50,8 @@ const Skills = (): ReactElement => {
             <Wrap w={['100%', '100%', '75%']} justify={'space-between'} spacing={14}>
                 <WrapItem>
                     <VStack textAlign={'left'}>
-                        <Box alignItems={'start'} w={'100%'} fontSize={'1.5em'} mb={'8px'}>
-                            Languages & Libraries
+                        <Box alignItems={'start'} w={'100%'} mb={'8px'}>
+                            <Heading size={'md'}>Languages & Libraries</Heading>
                         </Box>
                         <Wrap spacing={24}>
                             <WrapItem>
@@ -72,8 +73,8 @@ const Skills = (): ReactElement => {
                 </WrapItem>
                 <WrapItem>
                     <VStack textAlign={'left'}>
-                        <Box alignItems={'start'} w={'100%'} fontSize={'1.5em'} mb={'8px'}>
-                            Tools and Other Skills
+                        <Box alignItems={'start'} w={'100%'} mb={'8px'}>
+                            <Heading size={'md'}>Tools and Other Skills</Heading>
                         </Box>
                         <Wrap spacing={24}>
                             <WrapItem>
