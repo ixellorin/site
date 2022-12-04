@@ -36,11 +36,11 @@ const About = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined): R
                     </Text>
                     <br/>
                     <Text>
-                        Over the course of my six-year academic tenure, I spent a total of <b>24 months in the Computer Science Co-Op program</b>; I worked in Vancouver for <b>VISIER</b>, then moved on to join <b>Access to Media Education Society</b>, a non-profit organization that engages youths from marginalized communities with digital mediums. My final co-op placement landed me in Japan, developing software for social robotics research at the <b>Advanced Telecommunications Research Institute</b>; I even got to be in a National Geographic docuseries!
+                        Over the course of my six years there, I spent a total of <b>24 months in the Computer Science Co-Op program</b>; I worked in Vancouver for <b>VISIER</b>, then moved on to join <b>Access to Media Education Society</b>, a non-profit organization that engages youths from marginalized communities with digital mediums. My final co-op placement landed me in <b>Japan</b>, developing software for social robotics research at the <b>Advanced Telecommunications Research Institute</b>; I even got to be in a National Geographic docuseries!
                     </Text>
                     <br/>
                     <Text>
-                        Currently, I&apos;m a Full-stack Software Developer on <b>KPMG</b> Vancouver&apos;s Data Analytics (Lighthouse) Team, and <b></b>, as well as serving as its unofficial UI/UX Designer, engaging with clients and providing data-driven solutions.
+                        Currently, I&apos;m a Full-stack Software Developer on <b>KPMG</b> Vancouver&apos;s Data Analytics (Lighthouse) Team. My responsibilities include engaging with clients and providing data-driven solutions, as well as acting as an unofficial UI/UX designer. I have also recently been deployed to the <b>KPMG National Managed Services Platform</b> team, where my responsibilities include devloping applications and building a platform to serve as a boilerplate for other teams to develop software.
                     </Text>
                 </Box>
             </HStack>
