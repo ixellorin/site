@@ -47,13 +47,13 @@ const Skills = (): ReactElement => {
     return (
         <VStack py={'10%'} spacing={14}>
             <Heading>Skillset</Heading>
-            <Wrap w={['100%', '100%', '75%']} justify={'space-between'} spacing={[2, 2,14]}>
+            <Wrap w={['100%', '100%', '75%']} justify={'space-between'} spacing={[10, 14]}>
                 <WrapItem>
                     <VStack textAlign={'left'}>
                         <Box alignItems={'start'} w={'100%'} mb={'8px'}>
                             <Heading size={'md'}>Languages & Libraries</Heading>
                         </Box>
-                        <Wrap spacing={24}>
+                        <Wrap spacing={[10, 24]}>
                             <WrapItem>
                                 <VStack alignContent={'start'}>
                                     {(feSkillset || []).map((skill, n) => {
@@ -76,7 +76,7 @@ const Skills = (): ReactElement => {
                         <Box alignItems={'start'} w={'100%'} mb={'8px'}>
                             <Heading size={'md'}>Tools and Other Skills</Heading>
                         </Box>
-                        <Wrap spacing={24}>
+                        <Wrap spacing={[10, 24]}>
                             <WrapItem>
                                 <VStack>
                                     {(toolSetA || []).map((skill, n) => {
