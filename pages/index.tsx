@@ -32,10 +32,10 @@ export default function Home() {
   const projectsRef = useRef(null);
   
   const [scrollerSections, setScrollerSections] = useState<IScrollerSection[]>([
-    { label: 'About', icon: '/icons/card_icons/ic_account_circle_24px.svg', description: "Read a little more about myself, my goals and my passions.", target: aboutRef },
+    { label: 'About', icon: '/icons/card_icons/ic_account_circle_24px.svg', description: "Read a little more about myself, my goals, and my passions.", target: aboutRef },
     { label: 'Experience', icon: '/icons/card_icons/ic_camera_24px.svg', description: "A summary of skills, previous work experience and other industry-related events such as hackathons; an online resume of sorts.", target: experienceRef },
     { label: 'Projects', icon: '/icons/card_icons/ic_layers_24px.svg', description: "Library of small projects with links to source code and/or live examples, including those from hackathons.", target: projectsRef },
-    { label: 'Photography', icon: '/icons/card_icons/ic_camera_24px.svg', description: "Gallery of some of my photographs; practice makes progress." },
+    { label: 'Photography', icon: '/icons/card_icons/ic_camera_24px.svg', description: "(Coming soon) Gallery of some of my photographs; practice makes progress." },
   ]) ;
 
 
