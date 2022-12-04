@@ -10,7 +10,7 @@ interface ISectionLayoutProps {
 const SectionLayout = ({ background='none', children }: ISectionLayoutProps): ReactElement => {
     return (
         <Box background={background} w={'100%'}>
-            <Box pl={['10%', '10%', 'calc(calc(100vw - 165px) * .1)']} pr={['10%', '10%', 'calc(calc(100vw - 165px) * .1 + 165px)']}>
+            <Box pl={['5%', '5%', 'calc(calc(100vw - 165px) * .1)']} pr={['5%', '5%', 'calc(calc(100vw - 165px) * .1 + 165px)']}>
                 {children}
             </Box>
         </Box>

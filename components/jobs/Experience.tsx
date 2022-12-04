@@ -46,7 +46,7 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
     return (
         <VStack w={'100%'} py={'10%'} id="experience" textAlign={'center'} spacing={14} ref={ref}>
             <Heading>Work Experience</Heading>
-            <Wrap w={'100%'} justify={'space-around'}>
+            <Wrap w={'100%'} justify={'space-evenly'} spacing={2}>
                     {jobs.map((job, n) => {
                         return (
                             <WrapItem key={job.title}>

@@ -53,7 +53,7 @@ const Skills = (): ReactElement => {
                         <Box alignItems={'start'} w={'100%'} mb={'8px'}>
                             <Heading size={'md'}>Languages & Libraries</Heading>
                         </Box>
-                        <Wrap spacing={[10, 24]}>
+                        <Wrap spacing={[10, 10, 10, 24]}>
                             <WrapItem>
                                 <VStack alignContent={'start'}>
                                     {(feSkillset || []).map((skill, n) => {
@@ -76,7 +76,7 @@ const Skills = (): ReactElement => {
                         <Box alignItems={'start'} w={'100%'} mb={'8px'}>
                             <Heading size={'md'}>Tools and Other Skills</Heading>
                         </Box>
-                        <Wrap spacing={[10, 24]}>
+                        <Wrap spacing={[10, 10, 10, 24]}>
                             <WrapItem>
                                 <VStack>
                                     {(toolSetA || []).map((skill, n) => {
@@ -96,7 +96,7 @@ const Skills = (): ReactElement => {
                 </WrapItem>
             </Wrap>
             <Hide above={'md'}>
-                <Accordion w={'100%'} defaultIndex={[0]} allowMultiple>
+                <Accordion w={'100%'} defaultIndex={[]} allowMultiple>
                     <AccordionItem>
                         <Heading>
                             <AccordionButton>

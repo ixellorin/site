@@ -37,7 +37,7 @@ const Tree = ({ nodes }: ITreeProps): JSX.Element => {
             <VStack>
                 <Heading><span>Let&apos;s get started!</span></Heading>
                 <Box pt={[1,2,4,8,14]}>
-                    <Show above={'md'}>
+                    <Show above={'lg'}>
                         <svg id="nodes" width={treeWidth} className={styles.tree}>
                             <line x1="50%" y1="13" x2="50%" y2="95" className={styles.stem}/>
                             <line x1="40" y1="95" x2="100%" y2="95" transform="translate(-20,0)" className={styles.stem}/>
@@ -55,21 +55,21 @@ const Tree = ({ nodes }: ITreeProps): JSX.Element => {
                     </Show>
                 </Box>
             </VStack>
-            <Show above={'md'}>
+            <Show above={'lg'}>
                 <HStack justify="space-around" alignItems="center" w={treeWidth + offset} px={8}>
                     {nodes.map((node, n) => {
                         return(<NodeCard useAutoWidth={true} key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description} target={node.target}/>)
                     })}
                 </HStack>
             </Show>
-            <Hide above={'md'}>
-                <Wrap justify="space-around" alignItems="center"  w={treeWidth + offset}>
+            <Hide above={'lg'}>
+                <Wrap justify="space-around" alignItems="center" w={'100%'}>
                     {nodes.map((node, n) => {
                         return(<NodeCard key={n} label={node.label} icon={node.icon} handleHover={handleMouseOver} handleLeave={handleMouseLeave} description={node.description} target={node.target}/>)
                     })}
                 </Wrap>
             </Hide>
-            <Show above={'md'}>
+            <Show above={'lg'}>
                 <Box minHeight={'50px'}>
                     <Heading size={'md'}>{description}</Heading>
                 </Box>
