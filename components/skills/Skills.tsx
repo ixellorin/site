@@ -107,7 +107,7 @@ const Skills = (): ReactElement => {
                             </AccordionButton>
                         </Heading>
                         <AccordionPanel pb={4}>
-                            <Wrap justify={'space-evenly'} pt={[2, 4]} spacing={14}>
+                            <Wrap justify={'space-evenly'} pt={2} spacing={4}>
                                 <WrapItem >
                                     <SkillRating label={"Learning:"} rating={1} max={max} legend={true}/>
                                 </WrapItem>
