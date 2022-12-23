@@ -3,7 +3,7 @@
     margin-right: 36px;
     position: -webkit-sticky;
     position: sticky;
-    top:25%;
+    top:calc(calc(100vh - 524px) / 2);
     z-index: 200;
     height: 0px;
     overflow: visible;
