@@ -1,25 +1,28 @@
 {
-  "name": "learn-starter",
+  "name": "site-ts",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.3",
-    "@mdi/js": "^5.9.55",
-    "@mdi/react": "^1.4.0",
-    "dotenv": "^8.2.0",
-    "material-design-icons": "^3.0.1",
-    "next": "^10.0.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "sass": "^1.32.6"
-  },
-  "devDependencies": {
-    "@svgr/cli": "^5.5.0"
+    "@chakra-ui/react": "^2.4.1",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mdi/js": "^7.0.96",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.5",
+    "framer-motion": "^6.5.1",
+    "next": "13.0.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.56.1",
+    "typescript": "4.9.3"
   }
 }

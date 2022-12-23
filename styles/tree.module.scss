@@ -1,0 +1,35 @@
+.node {
+    fill: #FFFFFF;
+    stroke: var(--blue-dk);
+    stroke-width: 3px;
+}
+
+.stem {
+    stroke-width: 3px;
+}
+
+.treeContainer {
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .computer {
+        overflow: visible;
+        path {
+            transform: translateX(-100px);
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .computer {
+        overflow: visible;
+        path {
+            transform: translateX(-25px);
+        }
+    }
+}
