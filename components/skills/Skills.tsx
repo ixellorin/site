@@ -94,6 +94,25 @@ const Skills = (): ReactElement => {
                         </Wrap>
                     </VStack>
                 </WrapItem>
+                <WrapItem>
+                    <VStack textAlign={'left'}>
+                        <Box alignItems={'start'} w={'100%'} mb={'8px'}>
+                            <Heading size={'md'}>Supplementary Learning (Courses)</Heading>
+                        </Box>
+                        <Box textAlign={'left'} w={'100%'}>
+                            AZ-900: Azure Fundamentals
+                        </Box>
+                        <Box textAlign={'left'} w={'100%'}>
+                            DP-900: Azure Data Fundamentals
+                        </Box>
+                        <Box textAlign={'left'} w={'100%'}>
+                            AZ-204: Developing Solutions for Microsoft Azure
+                        </Box>
+                        <Box textAlign={'left'} w={'100%'}>
+                            AZ-305: Designing Microsoft Azure Infrastructure Solutions
+                        </Box>
+                    </VStack>
+                </WrapItem>
             </Wrap>
             <Hide above={'md'}>
                 <Accordion w={'100%'} defaultIndex={[]} allowMultiple>
@@ -128,7 +147,7 @@ const Skills = (): ReactElement => {
                     </AccordionItem>
                 </Accordion>
             </Hide>
-            <Show above={'lg'}>
+            <Show above={'md'}>
                 <Wrap justify={'space-evenly'} pt={[8, 8, 8, 24]} spacing={14}>
                     <WrapItem >
                         <SkillRating label={"Learning:"} rating={1} max={max} legend={true}/>

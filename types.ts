@@ -1,4 +1,4 @@
-import { RefObject } from "react"
+import { ReactElement, RefObject } from "react"
 
 export interface IScrollerSection {
     label: string
@@ -16,13 +16,15 @@ export interface IHackathon {
 }
 
 export interface IJob {
+    // hooks: string[],
     company: string,
-    title: string,
     date: string,
-    hooks: string[],
+    hooks: ReactElement,
     img: string,
-    imgWidth: number,
     imgHeight: number,
+    imgWidth: number,
+    techStack: string,
+    title: string,
 }
 
 export interface IProject {
