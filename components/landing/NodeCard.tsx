@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { Box, Center, Spacer, VStack, useMediaQuery } from '@chakra-ui/react';
+import { Box, Center, Spacer, VStack } from '@chakra-ui/react';
 import { RefObject, useEffect, useState } from 'react';
 import styles from '../../styles/nodecard.module.scss';
 

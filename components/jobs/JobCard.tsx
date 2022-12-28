@@ -24,9 +24,6 @@ const JobCard = ({ job, children }: IJobCardProps): ReactElement => {
                     <Box px={4}>{job.techStack}</Box>
                     <VStack mt={['10px','30px']} w={'100%'} textAlign={'left'}>
                         {
-                            // (job.hooks || []).map((hook, n) => {
-                            //     return (<Box key={n} w={'100%'} textAlign={'left'}>{hook}</Box>)
-                            // })
                             children
                         }
                         <br/>

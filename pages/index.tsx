@@ -6,22 +6,14 @@ import About from '../components/About';
 import Experience from '../components/jobs/Experience';
 import Projects from '../components/projects/Projects';
 import Scroller from '../components/scroller/Scroller';
-import AccountCardIcon from '../components/icons/AccountCardIcon';
-import CameraCardIcon from '../components/icons/CameraCardIcon';
-import ComputerCardIcon from '../components/icons/ComputerCardIcon';
-import LayersCardIcon from '../components/icons/LayersCardIcon';
 import SectionLayout from '../components/layouts/SectionLayout';
 import Skills from '../components/skills/Skills';
 import Hackathons from '../components/hackathons/Hackathons';
 
-import AccountIcon from '../components/icons/AccountIcon';
-import CameraIcon from '../components/icons/CameraIcon';
-import ComputerIcon from '../components/icons/ComputerIcon';
-import LayersIcon from '../components/icons/LayersIcon';
-
 import { RefObject, useEffect, useRef, useState } from 'react';
 import { Flex, Show, VStack } from '@chakra-ui/react';
 import { IScrollerSection } from '../types';
+import Photography from '../components/photography/Photography';
 
 export default function Home() {
 
@@ -30,12 +22,13 @@ export default function Home() {
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
+  const photographyRef =useRef(null)
   
   const [scrollerSections, setScrollerSections] = useState<IScrollerSection[]>([
     { label: 'About', icon: '/icons/card_icons/ic_account_circle_24px.svg', description: "Read a little more about myself, my goals, and my passions.", target: aboutRef },
     { label: 'Experience', icon: '/icons/card_icons/ic_camera_24px.svg', description: "A summary of skills, previous work experience and other industry-related events such as hackathons; an online resume of sorts.", target: experienceRef },
     { label: 'Projects', icon: '/icons/card_icons/ic_layers_24px.svg', description: "Library of small projects with links to source code and/or live examples, including those from hackathons.", target: projectsRef },
-    { label: 'Photography', icon: '/icons/card_icons/ic_camera_24px.svg', description: "(Coming soon) Gallery of some of my photographs; practice makes progress." },
+    { label: 'Photography', icon: '/icons/card_icons/ic_camera_24px.svg', description: "(Coming soon) Gallery of some of my photographs; practice makes progress.", target: photographyRef },
   ]) ;
 
 
@@ -133,6 +126,9 @@ export default function Home() {
             </SectionLayout>
             <SectionLayout  background={'primary.blue.400'}>
               <Projects ref={projectsRef}/>
+            </SectionLayout>
+            <SectionLayout  background={'primary.blue.400'}>
+              <Photography ref={photographyRef}/>
             </SectionLayout>
           </VStack>
         </Flex>
