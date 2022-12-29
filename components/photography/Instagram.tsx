@@ -41,11 +41,9 @@ const Instagram = () => {
                 .catch((error: any) => {
                     setInstaPhotos([]);
                 })
-                console.log(photos.length)
                 return photos
             }
             fetchPhotos().then(response => {
-                console.log(response.length)
                 setNextURL(tempURL)
                 setInstaPhotos(instaPhotos.concat(response))
             })
@@ -55,7 +53,6 @@ const Instagram = () => {
     useEffect(() => {
         // Fetch instagram images
         if (!(instaPhotos.length > 0)) {
-            console.log('logging on load')
             let tempURL: string
             let limit = 12;
             let photos: any[] = []
@@ -112,45 +109,47 @@ const Instagram = () => {
                 objectFit={'scale-down'}
                 alt={'instagram-'+selectedPhoto?.id}
                 />
-                {selectedPhoto && <Switch onChange={() => setDark(!dark)} colorScheme='whiteAlpha' mt={6} position={'absolute'}/>}
+                {selectedPhoto && <Switch onChange={() => setDark(!dark)} colorScheme='whiteAlpha' mt={4} position={'absolute'}/>}
             </Box>
             }
-            <Box w={selectedPhoto ? '25%' : '100%'} p={2} h={'100%'} overflowY={'auto'}  display={'inline-block'} background={dark ? 'black' : 'none'} transition={'all 1000ms ease-in-out'} overflowX={'visible'}>
-                <VStack w={'100%'} overflowX={'visible'}>
-                    {
-                        instaPhotos.length > 0 ? (
-                            <Box display={'flex'} flexWrap={'wrap'} w={'100%'} maxH={'calc(100% - 50px)'} overflowX={'visible'}>
-                                {
-                                    sorted.map((column, n) => {
-                                        return (
-                                            <Box key={n} flex={['100%', '50%', '50%', '25%']} maxW={['100%', '50%', '50%', '25%']} px={2} maxH={'100%'} overflowX={'visible'}>
-                                                {
-                                                    column.map((photo: any) => {
-                                                        return (
-                                                            <Fade key={photo.id} in={photo.media_url !== null}>
-                                                                <AspectRatio maxW='100%' ratio={4 / 4} my={2}>
-                                                                    <Box w={'100%'} h={'100%'} onClick={() => {setSelectedPhoto(photo)}} _hover={ selectedPhoto ? { cursor: 'pointer', position: 'absolute', height: '150%', width: '150%', top: '-25%', left: '-25%', zIndex: 9999 } : { cursor: 'pointer' }} transition={'all 1000ms ease'}>
-                                                                        <Image src={photo.media_url}
-                                                                        py={0}
-                                                                        h={'100%'} w={'100%'}
-                                                                        objectFit={'cover'}
-                                                                        alt={'instagram-'+photo.id}
-                                                                        />
-                                                                        <Box position={'absolute'} display={'flex'} h={'100%'} w={'100%'} bottom={0} _hover={{  bgGradient: 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));'}} transition={'all 1000ms ease'}/>
-                                                                    </Box>
-                                                                </AspectRatio>
-                                                            </Fade>
-                                                        )
+            <Box w={selectedPhoto ? '25%' : '100%'}  h={'100%'} overflowY={'auto'}  display={'inline-block'} background={dark ? 'black' : 'none'} transition={'all 1000ms ease-in-out'}>
+                <VStack borderLeft={!selectedPhoto ? 'none' : dark ? 'solid 1px' : 'solid 1px'} borderLeftColor={dark ? 'white' : 'primary.blue.100'}>
+                    <VStack h={'100%'} w={'100%'}>
+                        {
+                            instaPhotos.length > 0 ? (
+                                <Box display={'flex'} flexWrap={'wrap'} w={'100%'} maxH={'calc(100% - 50px)'} >
+                                    {
+                                        sorted.map((column, n) => {
+                                            return (
+                                                <Box key={n} flex={['100%', '50%', '50%', '25%']} maxW={['100%', '50%', '50%', '25%']} px={2} maxH={'100%'} >
+                                                    {
+                                                        column.map((photo: any) => {
+                                                            return (
+                                                                <Fade key={photo.id} in={photo.media_url !== null}>
+                                                                    <AspectRatio maxW='100%' ratio={4 / 4} my={2}>
+                                                                        <Box w={'100%'} h={'100%'} onClick={() => {setSelectedPhoto(photo)}} _hover={ selectedPhoto ? { cursor: 'pointer', position: 'absolute', height: '150%', width: '150%', top: '-25%', left: '-25%', zIndex: 9999 } : { cursor: 'pointer' }} transition={'all 1000ms ease'}>
+                                                                            <Image src={photo.media_url}
+                                                                            py={0}
+                                                                            h={'100%'} w={'100%'}
+                                                                            objectFit={'cover'}
+                                                                            alt={'instagram-'+photo.id}
+                                                                            />
+                                                                            <Box position={'absolute'} display={'flex'} h={'100%'} w={'100%'} bottom={0} _hover={{  bgGradient: 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));'}} transition={'all 1000ms ease'}/>
+                                                                        </Box>
+                                                                    </AspectRatio>
+                                                                </Fade>
+                                                            )
                                                         })
                                                     }
-                                            </Box>
-                                        )
-                                    })
-                                }
-                            </Box>
-                        ) : <></>
-                    }
-                    <Button onClick={showMore}>SHOW MORE</Button>
+                                                </Box>
+                                            )
+                                        })
+                                    }
+                                </Box>
+                            ) : <></>
+                        }
+                    </VStack>
+                    <Button bottom={0} onClick={showMore}>SHOW MORE</Button>
                 </VStack>
             </Box>
         </Box>

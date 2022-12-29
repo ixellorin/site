@@ -114,7 +114,7 @@ export default function Home() {
             <SectionLayout background={'primary.yellow'}>
               <Experience ref={experienceRef} />
             </SectionLayout>
-            <SectionLayout background={'primary.blue.white'}>
+            <SectionLayout background={'primary.white'}>
               <Skills />
             </SectionLayout>
             <SectionLayout background={'primary.green.400'}>
@@ -123,7 +123,7 @@ export default function Home() {
             <SectionLayout  background={'primary.blue.400'}>
               <Projects ref={projectsRef}/>
             </SectionLayout>
-            <SectionLayout  background={'primary.blue.400'}>
+            <SectionLayout  background={'primary.white'}>
               <Photography ref={photographyRef}/>
             </SectionLayout>
           </VStack>
