@@ -48,7 +48,6 @@ export default function Home() {
       if (sectionIndexMap[section] != null && sectionIndexMap[section].current) {
         if (-100 < (sectionIndexMap[section].current?.getBoundingClientRect().top || -101)
           && (sectionIndexMap[section].current?.getBoundingClientRect().top || -101) < 100) {
-          console.log("Setting current section", section)
           setSectionIndex(Number(section))
         }
       }
@@ -78,7 +77,6 @@ export default function Home() {
     scrollerSections.map((section, n) => {
       if (n == Number(sectionIndex) + 1) {
         if (sectionIndex < scrollerSections.length - 1 && scrollerSections[n + 1] != null) {
-          console.log(section.target, n)
           section.target?.current?.scrollIntoView({ behavior: "smooth", block: "start" })
         }
       }
@@ -87,10 +85,8 @@ export default function Home() {
 
   function decrSection() {
     scrollerSections.map((section, n) => {
-      console.log(n, Number(sectionIndex), n == Number(sectionIndex) - 1, scrollerSections[n - 1])
       if (n == Number(sectionIndex) - 1) {
         if (sectionIndex > 0 && scrollerSections[sectionIndex - 1] != null) {
-          console.log(section.target, n)
           section.target?.current?.scrollIntoView({ behavior: "smooth",  block: "start" })
         }
       }
