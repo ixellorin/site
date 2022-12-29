@@ -106,18 +106,16 @@ const Instagram = () => {
     return (
         <Box w={'100%'} h={'100%'}>
             {   
-            <Box maxH={'100%'} h={'100%'} w={`${selectedPhoto ? '75%' : '0px'}`} display={'inline-block'} background={`${dark ? 'black' : 'none'}`} transition={'all 1000ms ease-in-out'} py={2}>
-                    {/* <SlideFade in={selectedPhoto !== null}> */}
-                    <Image src={selectedPhoto?.media_url || ''}
-                    px={3} py={4} h={'calc(100% - 50px)'}
-                    objectFit={'scale-down'}
-                    alt={'instagram-'+selectedPhoto?.id}
-                    />
-                    {/* </SlideFade> */}
-                <Switch onChange={() => setDark(!dark)} colorScheme='whiteAlpha' mt={6} position={'absolute'}/>
+            <Box h={selectedPhoto ? '100%' : '0px'} w={selectedPhoto ? '75%' : '0px'} display={'inline-block'} background={dark ? 'black' : 'none'} transition={'all 1000ms ease-in-out'} py={2}>
+                <Image src={selectedPhoto?.media_url || ''}
+                px={3} py={4} h={'calc(100% - 50px)'}
+                objectFit={'scale-down'}
+                alt={'instagram-'+selectedPhoto?.id}
+                />
+                {selectedPhoto && <Switch onChange={() => setDark(!dark)} colorScheme='whiteAlpha' mt={6} position={'absolute'}/>}
             </Box>
             }
-            <Box w={`${selectedPhoto ? '25%' : '100%'}`} p={2} h={'100%'} overflowY={'auto'}  display={'inline-block'} background={`${dark ? 'black' : 'none'}`} transition={'all 1000ms ease-in-out'} overflowX={'visible'}>
+            <Box w={selectedPhoto ? '25%' : '100%'} p={2} h={'100%'} overflowY={'auto'}  display={'inline-block'} background={dark ? 'black' : 'none'} transition={'all 1000ms ease-in-out'} overflowX={'visible'}>
                 <VStack w={'100%'} overflowX={'visible'}>
                     {
                         instaPhotos.length > 0 ? (
