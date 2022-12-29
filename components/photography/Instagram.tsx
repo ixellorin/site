@@ -108,10 +108,10 @@ const Instagram = () => {
             {   
             <Box maxH={'100%'} h={'100%'} w={`${selectedPhoto ? '75%' : '0px'}`} display={'inline-block'} background={`${dark ? 'black' : 'none'}`} transition={'all 1000ms ease-in-out'} py={2}>
                     {/* <SlideFade in={selectedPhoto !== null}> */}
-                    <Image src={selectedPhoto.media_url || ''}
+                    <Image src={selectedPhoto?.media_url || ''}
                     px={3} py={4} h={'calc(100% - 50px)'}
                     objectFit={'scale-down'}
-                    alt={'instagram-'+selectedPhoto.id}
+                    alt={'instagram-'+selectedPhoto?.id}
                     />
                     {/* </SlideFade> */}
                 <Switch onChange={() => setDark(!dark)} colorScheme='whiteAlpha' mt={6} position={'absolute'}/>
