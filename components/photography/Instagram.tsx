@@ -17,7 +17,7 @@ const Instagram = () => {
     const [instaPhotos, setInstaPhotos] = useState<any[]>([]);
     const [sorted, setSorted] = useState<any[]>([]);
     const [err, setErr] = useState(false);
-    const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null)
+    const [selectedPhoto, setSelectedPhoto] = useState<any | null>(null)
     const [dark, setDark] = useState(false)
 
     const showMore = () => {
@@ -82,6 +82,7 @@ const Instagram = () => {
                 setInstaPhotos(instaPhotos.concat(response))
             })
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
@@ -107,9 +108,10 @@ const Instagram = () => {
             {   
             <Box maxH={'100%'} h={'100%'} w={`${selectedPhoto ? '75%' : '0px'}`} display={'inline-block'} background={`${dark ? 'black' : 'none'}`} transition={'all 1000ms ease-in-out'} py={2}>
                     {/* <SlideFade in={selectedPhoto !== null}> */}
-                    <Image src={selectedPhoto || ''}
+                    <Image src={selectedPhoto.media_url || ''}
                     px={3} py={4} h={'calc(100% - 50px)'}
                     objectFit={'scale-down'}
+                    alt={'instagram-'+selectedPhoto.id}
                     />
                     {/* </SlideFade> */}
                 <Switch onChange={() => setDark(!dark)} colorScheme='whiteAlpha' mt={6} position={'absolute'}/>
@@ -127,13 +129,14 @@ const Instagram = () => {
                                                 {
                                                     column.map((photo: any) => {
                                                         return (
-                                                            <Fade in={photo.media_url !== null}>
+                                                            <Fade key={photo.id} in={photo.media_url !== null}>
                                                                 <AspectRatio maxW='100%' ratio={4 / 4} my={2}>
-                                                                    <Box w={'100%'} h={'100%'} onClick={() => {setSelectedPhoto(photo.media_url)}} _hover={ selectedPhoto ? { cursor: 'pointer', position: 'absolute', height: '150%', width: '150%', top: '-25%', left: '-25%', zIndex: 9999 } : { cursor: 'pointer' }} transition={'all 1000ms ease'}>
+                                                                    <Box w={'100%'} h={'100%'} onClick={() => {setSelectedPhoto(photo)}} _hover={ selectedPhoto ? { cursor: 'pointer', position: 'absolute', height: '150%', width: '150%', top: '-25%', left: '-25%', zIndex: 9999 } : { cursor: 'pointer' }} transition={'all 1000ms ease'}>
                                                                         <Image src={photo.media_url}
                                                                         py={0}
                                                                         h={'100%'} w={'100%'}
                                                                         objectFit={'cover'}
+                                                                        alt={'instagram-'+photo.id}
                                                                         />
                                                                         <Box position={'absolute'} display={'flex'} h={'100%'} w={'100%'} bottom={0} _hover={{  bgGradient: 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));'}} transition={'all 1000ms ease'}/>
                                                                     </Box>
