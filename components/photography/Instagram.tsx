@@ -2,18 +2,23 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 /* Components */
-import { AspectRatio, Box, Button, Fade, HStack, Image, Slide, SlideFade, VStack, Wrap, WrapItem } from '@chakra-ui/react';
+import {
+    AspectRatio,
+    Box,
+    Button,
+    Fade,
+    Image,
+    Switch,
+    VStack,
+} from '@chakra-ui/react';
 
-import styles from '../../styles/instagram.module.scss';
-
-interface IInstagramProps {
-    show: boolean
-}
-const Instagram = ({ show }: IInstagramProps) => {
+const Instagram = () => {
     const [nextURL, setNextURL] = useState<string | null>(null);
     const [instaPhotos, setInstaPhotos] = useState<any[]>([]);
     const [sorted, setSorted] = useState<any[]>([]);
     const [err, setErr] = useState(false);
+    const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null)
+    const [dark, setDark] = useState(false)
 
     const showMore = () => {
         if (nextURL) {
@@ -36,9 +41,11 @@ const Instagram = ({ show }: IInstagramProps) => {
                 .catch((error: any) => {
                     setInstaPhotos([]);
                 })
+                console.log(photos.length)
                 return photos
             }
             fetchPhotos().then(response => {
+                console.log(response.length)
                 setNextURL(tempURL)
                 setInstaPhotos(instaPhotos.concat(response))
             })
@@ -96,36 +103,55 @@ const Instagram = ({ show }: IInstagramProps) => {
         }
     }, [instaPhotos])
     return (
-        <Box h={'100%'} w={'100%'}>
-            {
-                instaPhotos.length > 0 ? (
-                    <Box display={'flex'} flexWrap={'wrap'} w={'100%'}>
-                        {
-                            sorted.map((column, n) => {
-                                return (
-                                    <Box key={n} flex={['100%', '50%', '50%', '25%']} maxW={['100%', '50%', '50%', '25%']} px={2}>
-                                        {
-                                            column.map((photo: any) => {
-                                                return (
-                                                    <Fade in={photo.media_url !== null}>
-                                                        <AspectRatio maxW='100%' ratio={3 / 4}>
-                                                                <Image src={photo.media_url}
-                                                                py={2}
-                                                                objectFit={'cover'}
-                                                                />
-                                                        </AspectRatio>
-                                                    </Fade>
-                                                )
-                                                })
-                                            }
-                                    </Box>
-                                )
-                            })
-                        }
-                    </Box>
-                ) : <></>
+        <Box w={'100%'} h={'100%'}>
+            {   
+            <Box maxH={'100%'} h={'100%'} w={`${selectedPhoto ? '75%' : '0px'}`} display={'inline-block'} background={`${dark ? 'black' : 'none'}`} transition={'all 1000ms ease-in-out'} py={2}>
+                    {/* <SlideFade in={selectedPhoto !== null}> */}
+                    <Image src={selectedPhoto || ''}
+                    px={3} py={4} h={'calc(100% - 50px)'}
+                    objectFit={'scale-down'}
+                    />
+                    {/* </SlideFade> */}
+                <Switch onChange={() => setDark(!dark)} colorScheme='whiteAlpha' mt={6} position={'absolute'}/>
+            </Box>
             }
-            <Button onClick={showMore}>SHOW MORE</Button>
+            <Box w={`${selectedPhoto ? '25%' : '100%'}`} p={2} h={'100%'} overflowY={'auto'}  display={'inline-block'} background={`${dark ? 'black' : 'none'}`} transition={'all 1000ms ease-in-out'} overflowX={'visible'}>
+                <VStack w={'100%'} overflowX={'visible'}>
+                    {
+                        instaPhotos.length > 0 ? (
+                            <Box display={'flex'} flexWrap={'wrap'} w={'100%'} maxH={'calc(100% - 50px)'} overflowX={'visible'}>
+                                {
+                                    sorted.map((column, n) => {
+                                        return (
+                                            <Box key={n} flex={['100%', '50%', '50%', '25%']} maxW={['100%', '50%', '50%', '25%']} px={2} maxH={'100%'} overflowX={'visible'}>
+                                                {
+                                                    column.map((photo: any) => {
+                                                        return (
+                                                            <Fade in={photo.media_url !== null}>
+                                                                <AspectRatio maxW='100%' ratio={4 / 4} my={2}>
+                                                                    <Box w={'100%'} h={'100%'} onClick={() => {setSelectedPhoto(photo.media_url)}} _hover={ selectedPhoto ? { cursor: 'pointer', position: 'absolute', height: '150%', width: '150%', top: '-25%', left: '-25%', zIndex: 9999 } : { cursor: 'pointer' }} transition={'all 1000ms ease'}>
+                                                                        <Image src={photo.media_url}
+                                                                        py={0}
+                                                                        h={'100%'} w={'100%'}
+                                                                        objectFit={'cover'}
+                                                                        />
+                                                                        <Box position={'absolute'} display={'flex'} h={'100%'} w={'100%'} bottom={0} _hover={{  bgGradient: 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));'}} transition={'all 1000ms ease'}/>
+                                                                    </Box>
+                                                                </AspectRatio>
+                                                            </Fade>
+                                                        )
+                                                        })
+                                                    }
+                                            </Box>
+                                        )
+                                    })
+                                }
+                            </Box>
+                        ) : <></>
+                    }
+                    <Button onClick={showMore}>SHOW MORE</Button>
+                </VStack>
+            </Box>
         </Box>
     )
 
