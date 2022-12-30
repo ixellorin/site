@@ -125,7 +125,7 @@ const Instagram = () => {
     return (
         <Flex w={'100%'} h={'80vh'} maxH={'80vh'} pb={10}>
             {
-                <Box h={selectedPhoto ? '100%' : '0px'} w={selectedPhoto ? '75%' : '0px'} background={dark ? 'black' : 'none'} transition={'all 1000ms ease-in-out'} py={2} px={5}>
+                <Box h={selectedPhoto ? '100%' : '0px'} w={selectedPhoto ? '75%' : '0px'} background={dark ? 'black' : 'none'} transition={'all 1000ms ease-in-out'} py={selectedPhoto ? 2 : 0} px={selectedPhoto ? 5 : 0}>
                     <Image src={selectedPhoto?.media_url || ''}
                         h={'calc(100% - 50px)'}
                         objectFit={'scale-down'}
