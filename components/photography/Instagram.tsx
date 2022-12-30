@@ -32,7 +32,8 @@ const Instagram = () => {
             sm: 1,
             md: 1,
             lg: 2,
-            xl: 4,
+            xl: 2,
+            '2xl': 4
         }
     )
 
@@ -98,7 +99,6 @@ const Instagram = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-
     useEffect(() => {
         // Fetch instagram images
         if (instaPhotos.length > 0 && breakpoint) {
@@ -121,7 +121,8 @@ const Instagram = () => {
 
             setSorted(cols)
         }
-    }, [instaPhotos, breakpoint])
+    }, [instaPhotos, breakpoint, selectedPhoto])
+
     return (
         <Flex w={'100%'} h={'80vh'} maxH={'80vh'} pb={10}>
             {
