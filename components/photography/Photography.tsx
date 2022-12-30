@@ -20,6 +20,7 @@ const Photography = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefin
                     <Tab>Flickr</Tab>
                 </TabList>
                 {index == 0 && <Instagram/>}
+                {index == 1 && <>Coming soon!</>}
             </Tabs>
         </VStack>
     )
