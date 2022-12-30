@@ -28,7 +28,7 @@ export default function Home() {
     { label: 'About', icon: '/icons/card_icons/ic_account_circle_24px.svg', description: "Read a little more about myself, my goals, and my passions.", target: aboutRef },
     { label: 'Experience', icon: '/icons/card_icons/ic_camera_24px.svg', description: "A summary of skills, previous work experience and other industry-related events such as hackathons; an online resume of sorts.", target: experienceRef },
     { label: 'Projects', icon: '/icons/card_icons/ic_layers_24px.svg', description: "Library of small projects with links to source code and/or live examples, including those from hackathons.", target: projectsRef },
-    { label: 'Photography', icon: '/icons/card_icons/ic_camera_24px.svg', description: "(Coming soon) Gallery of some of my photographs; practice makes progress.", target: photographyRef },
+    { label: 'Photography', icon: '/icons/card_icons/ic_camera_24px.svg', description: "A gallery of some of my photos you can find on social media. Practice makes progress!", target: photographyRef },
   ]) ;
 
 
@@ -120,10 +120,10 @@ export default function Home() {
             <SectionLayout background={'primary.green.400'}>
               <Hackathons/>
             </SectionLayout>
-            <SectionLayout  background={'primary.blue.400'}>
+            <SectionLayout  background={'primary.yellow'}>
               <Projects ref={projectsRef}/>
             </SectionLayout>
-            <SectionLayout  background={'primary.white'}>
+            <SectionLayout  background={'primary.blue.400'}>
               <Photography ref={photographyRef}/>
             </SectionLayout>
           </VStack>

@@ -5,12 +5,17 @@ import { useState, useEffect } from 'react';
 import {
     AspectRatio,
     Box,
-    Button,
+    Center,
     Fade,
+    Flex,
     Image,
+    Show,
     Switch,
+    useBreakpointValue,
     VStack,
 } from '@chakra-ui/react';
+import MDIIcon from '../icons/MDIIcon';
+import { mdiChevronDoubleDown } from '@mdi/js';
 
 const Instagram = () => {
     const [nextURL, setNextURL] = useState<string | null>(null);
@@ -20,27 +25,38 @@ const Instagram = () => {
     const [selectedPhoto, setSelectedPhoto] = useState<any | null>(null)
     const [dark, setDark] = useState(false)
 
+    const breakpoint = useBreakpointValue(
+        {
+            base: 4,
+            xs: 1,
+            sm: 1,
+            md: 1,
+            lg: 2,
+            xl: 4,
+        }
+    )
+
     const showMore = () => {
         if (nextURL) {
             let tempURL = nextURL
             let limit = 12;
             let photos: any[] = []
             const fetchPhotos = async () => {
-                await fetch(nextURL+`&limit=${limit}`, { method: 'GET', headers: { 'Content-Type': 'application/json' }})
-                .then((response) => {
-                    return response.json()
-                })
-                .then(async (response) => {
-                    photos=photos.concat(response.data.filter((item: any) => item.media_type !== 'VIDEO'))
-                    tempURL = response.paging.next
-                    limit = limit - photos.length
-                    if (limit > 0) {
-                        fetchPhotos()
-                    }
-                })
-                .catch((error: any) => {
-                    setInstaPhotos([]);
-                })
+                await fetch(nextURL + `&limit=${limit}`, { method: 'GET', headers: { 'Content-Type': 'application/json' } })
+                    .then((response) => {
+                        return response.json()
+                    })
+                    .then(async (response) => {
+                        photos = photos.concat(response.data.filter((item: any) => item.media_type !== 'VIDEO'))
+                        tempURL = response.paging.next
+                        limit = limit - photos.length
+                        if (limit > 0) {
+                            fetchPhotos()
+                        }
+                    })
+                    .catch((error: any) => {
+                        setInstaPhotos([]);
+                    })
                 return photos
             }
             fetchPhotos().then(response => {
@@ -57,21 +73,21 @@ const Instagram = () => {
             let limit = 12;
             let photos: any[] = []
             const fetchPhotos = async () => {
-                await fetch(`https://graph.instagram.com/me/media?fields=id,media_url,media_type&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}&media_type=IMAGE&limit=${limit}`, { method: 'GET', headers: { 'Content-Type': 'application/json' }})
-                .then((response) => {
-                    return response.json()
-                })
-                .then(async (response) => {
-                    photos=photos.concat(response.data.filter((item: any) => item.media_type !== 'VIDEO'))
-                    tempURL = response.paging.next
-                    limit = limit - photos.length
-                    if (limit > 0) {
-                        fetchPhotos()
-                    }
-                })
-                .catch((error: any) => {
-                    setInstaPhotos([]);
-                })
+                await fetch(`https://graph.instagram.com/me/media?fields=id,media_url,media_type&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}&media_type=IMAGE&limit=${limit}`, { method: 'GET', headers: { 'Content-Type': 'application/json' } })
+                    .then((response) => {
+                        return response.json()
+                    })
+                    .then(async (response) => {
+                        photos = photos.concat(response.data.filter((item: any) => item.media_type !== 'VIDEO'))
+                        tempURL = response.paging.next
+                        limit = limit - photos.length
+                        if (limit > 0) {
+                            fetchPhotos()
+                        }
+                    })
+                    .catch((error: any) => {
+                        setInstaPhotos([]);
+                    })
                 return photos
             }
             fetchPhotos().then(response => {
@@ -85,74 +101,141 @@ const Instagram = () => {
 
     useEffect(() => {
         // Fetch instagram images
-        if (instaPhotos.length > 0) {
-            const cols: Array<any[]>[] = [[],[],[],[]]
+        if (instaPhotos.length > 0 && breakpoint) {
+            const numCols = !selectedPhoto ? 4 : breakpoint
+            const cols: Array<any[]>[] = []
+
+            while (cols.length < numCols) {
+                cols.push([])
+            }
+
             let col = 0;
-        
+
             instaPhotos.forEach((photo) => {
-                if (col == 4) {
+                if (col == numCols) {
                     col = 0
                 }
                 cols[col].push(photo)
                 col++
             })
-            
+
             setSorted(cols)
         }
-    }, [instaPhotos])
+    }, [instaPhotos, breakpoint])
     return (
-        <Box w={'100%'} h={'100%'}>
-            {   
-            <Box h={selectedPhoto ? '100%' : '0px'} w={selectedPhoto ? '75%' : '0px'} display={'inline-block'} background={dark ? 'black' : 'none'} transition={'all 1000ms ease-in-out'} py={2}>
-                <Image src={selectedPhoto?.media_url || ''}
-                px={3} py={4} h={'calc(100% - 50px)'}
-                objectFit={'scale-down'}
-                alt={'instagram-'+selectedPhoto?.id}
-                />
-                {selectedPhoto && <Switch onChange={() => setDark(!dark)} colorScheme='whiteAlpha' mt={4} position={'absolute'}/>}
-            </Box>
+        <Flex w={'100%'} h={'80vh'} maxH={'80vh'} pb={10}>
+            {
+                <Box h={selectedPhoto ? '100%' : '0px'} w={selectedPhoto ? '75%' : '0px'} background={dark ? 'black' : 'none'} transition={'all 1000ms ease-in-out'} py={2} px={5}>
+                    <Image src={selectedPhoto?.media_url || ''}
+                        h={'calc(100% - 50px)'}
+                        objectFit={'scale-down'}
+                        alt={'instagram-' + selectedPhoto?.id}
+                    />
+                    {selectedPhoto &&
+                        <Center h={'50px'}>
+                            <Box>
+                                <Switch onChange={() => setDark(!dark)} colorScheme='whiteAlpha' />
+                            </Box>
+                        </Center>
+                    }
+                </Box>
             }
-            <Box w={selectedPhoto ? '25%' : '100%'}  h={'100%'} overflowY={'auto'}  display={'inline-block'} background={dark ? 'black' : 'none'} transition={'all 1000ms ease-in-out'}>
-                <VStack borderLeft={!selectedPhoto ? 'none' : dark ? 'solid 1px' : 'solid 1px'} borderLeftColor={dark ? 'white' : 'primary.blue.100'}>
-                    <VStack h={'100%'} w={'100%'}>
-                        {
-                            instaPhotos.length > 0 ? (
-                                <Box display={'flex'} flexWrap={'wrap'} w={'100%'} maxH={'calc(100% - 50px)'} >
-                                    {
-                                        sorted.map((column, n) => {
-                                            return (
-                                                <Box key={n} flex={['100%', '50%', '50%', '25%']} maxW={['100%', '50%', '50%', '25%']} px={2} maxH={'100%'} >
-                                                    {
-                                                        column.map((photo: any) => {
-                                                            return (
-                                                                <Fade key={photo.id} in={photo.media_url !== null}>
+            <Box w={selectedPhoto ? '25%' : '100%'} h={'100%'} background={dark ? 'black' : 'none'} transition={'all 1000ms ease-in-out'}>
+                <VStack borderLeft={!selectedPhoto ? 'none' : dark ? 'solid 1px' : 'solid 1px'} borderLeftColor={dark ? '#F1F1F2' : 'primary.blue.100'} overflowY={'auto'} h={'calc(100%)'} transition={'all 1000ms ease'}>
+                    {
+                        instaPhotos.length > 0 ? (
+                            <Box w={'100%'} display={'flex'} flexWrap={'wrap'} px={2}>
+                                {
+                                    sorted.map((column, n) => {
+                                        return (
+                                            <Box
+                                                key={n}
+                                                flex={[
+                                                    (!selectedPhoto ? '25%' : '100%'),
+                                                    (!selectedPhoto ? '25%' : '100%'),
+                                                    (!selectedPhoto ? '25%' : '100%'),
+                                                    (!selectedPhoto ? '25%' : '50%'),
+                                                    (!selectedPhoto ? '25%' : '50%'),
+                                                    '25%'
+                                                ]}
+                                                maxW={[(!selectedPhoto ? '25%' : '100%'),
+                                                (!selectedPhoto ? '25%' : '100%'),
+                                                (!selectedPhoto ? '25%' : '100%'),
+                                                (!selectedPhoto ? '25%' : '50%'),
+                                                (!selectedPhoto ? '25%' : '50%'),
+                                                    '25%'
+                                                ]}
+                                                px={1}
+                                                maxH={'100%'} >
+                                                {
+                                                    column.map((photo: any) => {
+                                                        return (
+                                                            <Fade key={photo.id} in={photo.media_url !== null}>
+                                                                <Show above={'sm'}>
                                                                     <AspectRatio maxW='100%' ratio={4 / 4} my={2}>
-                                                                        <Box w={'100%'} h={'100%'} onClick={() => {setSelectedPhoto(photo)}} _hover={ selectedPhoto ? { cursor: 'pointer', position: 'absolute', height: '150%', width: '150%', top: '-25%', left: '-25%', zIndex: 9999 } : { cursor: 'pointer' }} transition={'all 1000ms ease'}>
+                                                                        <Box
+                                                                            w={'100%'}
+                                                                            h={'100%'}
+                                                                            onClick={() => { setSelectedPhoto(photo) }}
+                                                                            _hover={selectedPhoto ?
+                                                                                { cursor: 'pointer', position: 'absolute', height: '175%', width: '175%', top: '-37.5%', left: '-37.5%', zIndex: 9999 } :
+                                                                                { cursor: 'pointer' }} transition={'all 1000ms ease'}
+                                                                        >
                                                                             <Image src={photo.media_url}
-                                                                            py={0}
-                                                                            h={'100%'} w={'100%'}
-                                                                            objectFit={'cover'}
-                                                                            alt={'instagram-'+photo.id}
+                                                                                py={0}
+                                                                                h={'100%'} w={'100%'}
+                                                                                objectFit={'cover'}
+                                                                                alt={'instagram-' + photo.id}
                                                                             />
-                                                                            <Box position={'absolute'} display={'flex'} h={'100%'} w={'100%'} bottom={0} _hover={{  bgGradient: 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));'}} transition={'all 1000ms ease'}/>
+                                                                            <Box
+                                                                                position={'absolute'}
+                                                                                h={'100%'}
+                                                                                w={'100%'}
+                                                                                bottom={0}
+                                                                                _hover={{ bgGradient: 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));' }} transition={'all 1000ms ease'}
+                                                                            />
                                                                         </Box>
                                                                     </AspectRatio>
-                                                                </Fade>
-                                                            )
-                                                        })
-                                                    }
-                                                </Box>
-                                            )
-                                        })
-                                    }
-                                </Box>
-                            ) : <></>
+                                                                </Show>
+                                                                <Show below={'sm'}>
+                                                                    <AspectRatio maxW='100%' ratio={4 / 4} my={2}>
+                                                                        <Box w={'100%'} h={'100%'} onClick={() => { setSelectedPhoto(photo) }} _hover={{ cursor: 'pointer' }} transition={'all 1000ms ease'}>
+                                                                            <Image src={photo.media_url}
+                                                                                py={0}
+                                                                                h={'100%'} w={'100%'}
+                                                                                objectFit={'cover'}
+                                                                                alt={'instagram-' + photo.id}
+                                                                            />
+                                                                            <Box position={'absolute'} h={'100%'} w={'100%'} bottom={0} _hover={{ bgGradient: 'linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));' }} transition={'all 1000ms ease'} />
+                                                                        </Box>
+                                                                    </AspectRatio>
+                                                                </Show>
+                                                            </Fade>
+                                                        )
+                                                    })
+                                                }
+                                            </Box>
+                                        )
+                                    })
+                                }
+                            </Box>
+                        ) : <></>
+                    }
+                    <Box pb={2}>
+                        {instaPhotos.length > 0 &&
+                            <Box as='button' position={'relative'} onClick={showMore} borderRadius={'50%'} color={'primary.blue.100'} background={dark ? 'primary.blue.400' : 'none'} border={dark ? 'none' : 'solid 1px #102A49'} h={'25px'} w={'25px'} alignContent={'flex-start'} transition={'all 500ms ease'}
+                                _hover={{
+                                    background: dark ? 'none' : 'primary.blue.100',
+                                    border: dark ? 'solid 1px #F1F1F2' : '',
+                                    color: 'primary.blue.400'
+                                }} >
+                                <MDIIcon icon={mdiChevronDoubleDown} boxSize={'18px'} />
+                            </Box>
                         }
-                    </VStack>
-                    <Button bottom={0} onClick={showMore}>SHOW MORE</Button>
+                    </Box>
                 </VStack>
             </Box>
-        </Box>
+        </Flex>
     )
 
 }
@@ -161,7 +244,7 @@ const Instagram = () => {
  * Shuffles array in place.
  * @param {Array} a items An array containing the items.
  */
- function shuffle(a:any) {
+function shuffle(a: any) {
     var j, x, i;
     for (i = a.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
