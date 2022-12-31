@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState, useEffect } from 'react';
 
 /* Components */
@@ -16,14 +16,21 @@ import {
 } from '@chakra-ui/react';
 import MDIIcon from '../icons/MDIIcon';
 import { mdiChevronDoubleDown } from '@mdi/js';
+import { InstagramContext } from './InstagramProvider';
 
 const Instagram = () => {
-    const [nextURL, setNextURL] = useState<string | null>(null);
-    const [instaPhotos, setInstaPhotos] = useState<any[]>([]);
-    const [sorted, setSorted] = useState<any[]>([]);
-    const [err, setErr] = useState(false);
-    const [selectedPhoto, setSelectedPhoto] = useState<any | null>(null)
-    const [dark, setDark] = useState(false)
+    const {
+        dark,
+        setDark,
+        instaPhotos,
+        setInstaPhotos,
+        nextURL,
+        setNextURL,
+        selectedPhoto,
+        setSelectedPhoto,
+        sorted,
+        setSorted
+    } = useContext(InstagramContext)
 
     const breakpoint = useBreakpointValue(
         {
