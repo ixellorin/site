@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 /* Components */
 import {
