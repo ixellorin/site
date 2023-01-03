@@ -22,7 +22,7 @@ const About = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefined): R
                     <Heading>About Me</Heading>
                     <br/>
                     <Text>
-                        Hi! My name is <b>Cio</b> and I&apos;m a <b>Full-stack Software Developer</b> currently based in <b>Vancouver</b>. I have a passion for <b>frontend development</b> and creating products that help clients achieve their goals in a fulfilling, seamless and enjoyable experience! I bring a <b>teamwork-focused</b> and end user-driven work ethic, with <b>4 years of industry experience</b> from Vancouver to Kyoto, and in organizations of all sizes.
+                        Hi! My name is <b>Cio</b> and I&apos;m a <b>Full-stack Software Developer</b> currently based in <b>Vancouver</b>. I have a passion for <b>frontend development</b> and creating products that help clients achieve their goals in a fulfilling, seamless and enjoyable workflow! I have experience developing solutions with<b>Azure Cloud Services</b>, creating <b>wireframes, mockups, and prototypes using Adobe XD and Figma</b>, and <b>leading & managing small-scale projects</b>. I bring a <b>teamwork-focused</b> and end user-driven work ethic, with <b>4 years of industry experience</b> from Vancouver to Kyoto, and in organizations of all sizes.
                     </Text>
                     <br/>
                     <Text>
