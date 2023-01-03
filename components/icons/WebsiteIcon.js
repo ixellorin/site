@@ -15,19 +15,9 @@ function SvgComponent(props) {
           fill="#43809f"
         />
         <path
-          data-name="Path 60"
-          d="M193.092 74.552v29.3H205.3V86.76a12.208 12.208 0 00-12.208-12.208z"
-          fill="#3a7190"
-        />
-        <path
           data-name="Path 61"
           d="M193.092 218.607H15.26a12.208 12.208 0 01-12.208-12.208V103.851H205.3v102.548a12.208 12.208 0 01-12.208 12.208z"
           fill="#a9dbf5"
-        />
-        <path
-          data-name="Path 62"
-          d="M193.092 103.851v114.756a12.208 12.208 0 0012.208-12.208V103.851z"
-          fill="#88c3e0"
         />
         <circle
           data-name="Ellipse 15"

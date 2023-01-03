@@ -1,0 +1,82 @@
+.card {
+    transition: .4s;
+    box-sizing: border-box;
+    background: none;
+    border-radius: 10px;
+    position: relative;
+    outline: none !important;
+    
+    svg {
+        stroke-width: 5px;
+        fill: none;
+        transition: .4s ease-out;
+    }
+    
+    .label {
+        font-size: 30px;
+        color: var(--blue-dk);
+        transition: .4s ease-out;
+    }
+}
+
+.card::before, .card::after {
+    content:"";
+    width: 0px;
+    height: 5px;
+    position: absolute;
+    transition: all .4s ease-out;
+    background: var(--grn-md);
+}
+
+.card::before {
+    top: 0px;
+    right: 0px;
+}
+
+.card::after {
+    bottom: 0px;
+    left: 0px;
+}
+
+        
+.container::before, .container::after {
+    content:"";
+    width: 5px;
+    height: 0px;
+    z-index: 299;
+    position: absolute;
+    transition: all .4s ease-out;
+    background: var(--grn-md);
+}
+
+.container::before {
+    bottom: 0px;
+    right: 0px;
+}
+
+.container::after {
+    top: 0px;
+    left: 0px;
+}
+
+.card:hover {
+    cursor: pointer;
+
+    svg {
+        stroke: var(--grn-md) !important;
+    }
+    
+    .label {        
+        ::before, ::after {
+            height: 100% !important;
+        }
+    }
+}
+
+.card:hover::before, .card:hover::after {
+    width: 100%;
+}
+
+.container:hover::before, .container:hover::after {
+    height: 100%;
+}
