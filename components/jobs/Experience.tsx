@@ -24,7 +24,7 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
                             </Heading>
                             <AccordionPanel pb={4} bg={'rgba(255,255,255,.4)'} borderWidth={'1px'} borderStyle={'solid'} borderColor={'primary.blue.100'}>
                             <Box w={'100%'} textAlign={'left'}>
-                                Developed <b>responsive, scalable</b> web applications leveraging <b>Azure Cloud Services</b> such as <b>Functions, Blob Storage, and Batch</b>. Introduced <b>CI/CD pipelines</b> into team's development process to boost efficiency and integrity.
+                                Developed <b>responsive, scalable</b> web applications leveraging <b>Azure Cloud Services</b> such as <b>Functions, Blob Storage, and Batch</b>. Introduced <b>CI/CD pipelines</b> into team&apos;s development process to boost efficiency and integrity.
                             </Box>
                             </AccordionPanel>
                         </AccordionItem>
