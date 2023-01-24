@@ -24,7 +24,7 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
                             </Heading>
                             <AccordionPanel pb={4} bg={'rgba(255,255,255,.4)'} borderWidth={'1px'} borderStyle={'solid'} borderColor={'primary.blue.100'}>
                             <Box w={'100%'} textAlign={'left'}>
-                                Develop <b>responsive</b> web applications that leverage <b>Azure Cloud Services</b> such as <b>Functions, Blob Storage, and Batch</b>, to create <b>data and deployment pipelines</b>, and interfaces that assist clients in making <b>data-driven decisions</b>.
+                                Developed <b>responsive, scalable</b> web applications leveraging <b>Azure Cloud Services</b> such as <b>Functions, Blob Storage, and Batch</b>. Introduced <b>CI/CD pipelines</b> into team's development process to boost efficiency and integrity.
                             </Box>
                             </AccordionPanel>
                         </AccordionItem>
@@ -39,7 +39,7 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
                             </Heading>
                             <AccordionPanel pb={4} bg={'rgba(255,255,255,.4)'} borderWidth={'1px'} borderStyle={'solid'} borderColor={'primary.blue.100'}>
                             <Box w={'100%'} textAlign={'left'}>
-                                Gained <b>leadership experience</b> on smaller projects through <b>making decisions and providing guidance</b> on software design, <b>managing work assignment</b>, and handling other project administration tasks such as <b>security and risk approvals.</b>
+                                Formulated and managed <b>project plans, scope & deadlines, security & compliance, and work assignment</b> to lead in delivering smaller-scale projects.
                             </Box>
                             </AccordionPanel>
                         </AccordionItem>
@@ -54,7 +54,7 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
                             </Heading>
                             <AccordionPanel pb={4} bg={'rgba(255,255,255,.4)'} borderWidth={'1px'} borderStyle={'solid'} borderColor={'primary.blue.100'}>
                             <Box w={'100%'} textAlign={'left'}>
-                                Engage clients directly through <b>brainstorming sessions</b>, walking through <b>wireframes and prototypes</b> created in Adobe XD and/or Figma, regular <b>demos</b>, and <b>project close-out.</b>
+                                Engaged clients directly through <b>brainstorming sessions</b>, walking through <b>wireframes and prototypes</b> created in Adobe XD and/or Figma, application <b>demos</b>, and <b>project close-outs/retrospectives.</b>
                             </Box>
                             </AccordionPanel>
                         </AccordionItem>
@@ -82,7 +82,7 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
                             </Heading>
                             <AccordionPanel pb={4} bg={'rgba(255,255,255,.4)'} borderWidth={'1px'} borderStyle={'solid'} borderColor={'primary.blue.100'}>
                             <Box w={'100%'} textAlign={'left'}>
-                                Convert <b>audio data</b> captured from <b>Speech-to-Text</b> into motion instructions to create more natural human-robot engagements.
+                                Transformed <b>audio data</b> captured from <b>Speech-to-Text</b> into motion instructions for responsive movement during human-robot interactions.
                             </Box>
                             </AccordionPanel>
                         </AccordionItem>
@@ -97,7 +97,7 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
                             </Heading>
                             <AccordionPanel pb={4} bg={'rgba(255,255,255,.4)'} borderWidth={'1px'} borderStyle={'solid'} borderColor={'primary.blue.100'}>
                             <Box w={'100%'} textAlign={'left'}>
-                                Design <b>utility function</b> based on current audio <b>data streams</b> and <b>historical data</b> to mimic <b>decision making</b> and natural conversation flow.
+                                Designed <b>utility function</b> based on audio <b>data streams</b> and <b>historical data</b> to mimic <b>decision making</b> and natural conversation flow.
                             </Box>
                             </AccordionPanel>
                         </AccordionItem>
@@ -105,14 +105,14 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
                             <Heading>
                                 <AccordionButton>
                                     <Box flex='1' textAlign='left' fontWeight={'bold'}>
-                                        Social robotics research
+                                        Collaboration & Teamwork
                                     </Box>
                                     <AccordionIcon />
                                 </AccordionButton>
                             </Heading>
                             <AccordionPanel pb={4} bg={'rgba(255,255,255,.4)'} borderWidth={'1px'} borderStyle={'solid'} borderColor={'primary.blue.100'}>
                             <Box w={'100%'} textAlign={'left'}>
-                                <b>Assist researchers</b> in setting up and conducting <b>human-robot interaction</b> experiments, as well as <b>developing tools</b> used during experiments.
+                                <b>Collaborated with engineers and communications ressearchers</b> to integrate <b>hardware and software components</b> used in research experiments.
                             </Box>
                             </AccordionPanel>
                         </AccordionItem>
@@ -140,7 +140,7 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
                             </Heading>
                             <AccordionPanel pb={4} bg={'rgba(255,255,255,.4)'} borderWidth={'1px'} borderStyle={'solid'} borderColor={'primary.blue.100'}>
                             <Box w={'100%'} textAlign={'left'}>
-                                <b>Develop and deploy</b> new company website through <b>WordPress website builder</b>, creating <b>custom plugins and HTML,</b> and <b>tracking website analytics</b>.
+                                <b>Developed and managed deployments</b> of new, modernized company website through <b>WordPress website builder</b>, creating <b>custom plugins, HTML, and CSS</b> for improving user experience and tracking insights    .
                             </Box>
                             </AccordionPanel>
                         </AccordionItem>
@@ -155,7 +155,7 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
                             </Heading>
                             <AccordionPanel pb={4} bg={'rgba(255,255,255,.4)'} borderWidth={'1px'} borderStyle={'solid'} borderColor={'primary.blue.100'}>
                             <Box w={'100%'} textAlign={'left'}>
-                                <b>Design</b> a new, <b>modernized</b> look for the company website through Adobe Illustrator, and <b>present designs to stakeholders</b>.
+                                <b>Designed</b> a new, <b>modernized</b> look for the company website through Adobe Illustrator, and <b>engaged stakeholders in design demos</b>.
                             </Box>
                             </AccordionPanel>
                         </AccordionItem>
@@ -170,7 +170,7 @@ const Experience = (_props: any, ref: React.LegacyRef<HTMLDivElement> | undefine
                             </Heading>
                             <AccordionPanel pb={4} bg={'rgba(255,255,255,.4)'} borderWidth={'1px'} borderStyle={'solid'} borderColor={'primary.blue.100'}>
                             <Box w={'100%'} textAlign={'left'}>
-                                Assist in <b>communications</b>, as well as <b>photographing events</b>.
+                                Assisted in <b>communications</b>, through <b>photographing events</b> to build and maintain online presence.
                             </Box>
                             </AccordionPanel>
                         </AccordionItem>
