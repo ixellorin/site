@@ -128,6 +128,7 @@ const Instagram = () => {
 
             setSorted(cols)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [instaPhotos, breakpoint, selectedPhoto])
 
     return (
